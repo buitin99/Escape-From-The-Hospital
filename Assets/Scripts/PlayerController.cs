@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _characterController;
     private PlayerInputAction _playerInputActions;
     [SerializeField]
-    private float _speed = 0.1f;
+    private float _speed = 1f;
     private Vector2 _inputMove;
 
     void FixedUpdate()
