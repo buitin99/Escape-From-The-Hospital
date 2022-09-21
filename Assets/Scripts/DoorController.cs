@@ -21,4 +21,10 @@ public class DoorController : MonoBehaviour
     {
         LeanTween.moveLocalY(gameObject, 5.02f, 1f).setEaseInQuad();
     }
+
+    private void OnDestroy() 
+    {
+        GameEvents.current.onDoorWayTriggerEnter -= OnDoorwayOpen;
+        GameEvents.current.onDoorWayTriggerExit -= OnDoorwayClose;  
+    }
 }

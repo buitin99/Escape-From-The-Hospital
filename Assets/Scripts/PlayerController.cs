@@ -11,14 +11,12 @@ using UnityEngine.InputSystem;
         [SerializeField]
         private float _forceMagnitude;
 
-
         private void Awake() {
             _characterController = GetComponent<CharacterController>();
             _playerInputActions = new PlayerInputAction(); 
             
             _playerInputActions.Player.Move.performed += SetDirMove;
             _playerInputActions.Player.Move.canceled += SetDirMove;
-
         }
         private void OnEnable() {
             _playerInputActions.Enable();   
@@ -33,13 +31,7 @@ using UnityEngine.InputSystem;
         private void SetDirMove( InputAction.CallbackContext ctx) {
             _inputMove = ctx.ReadValue<Vector2>();
         }
-
-        private void OnDestroy() {
-            _playerInputActions.Player.Move.performed -= SetDirMove;
-            _playerInputActions.Player.Move.canceled -= SetDirMove;
-        }
-
-         private void OnControllerColliderHit(ControllerColliderHit hit) 
+        private void OnControllerColliderHit(ControllerColliderHit hit) 
         {
             Rigidbody _rg = hit.collider.attachedRigidbody;
             
@@ -53,8 +45,9 @@ using UnityEngine.InputSystem;
             }
         }
 
-        private void OnCollisionEnter(Collision other) {
-            Debug.Log(other);
+        private void OnDestroy() {
+            _playerInputActions.Player.Move.performed -= SetDirMove;
+            _playerInputActions.Player.Move.canceled -= SetDirMove;
         }
 
     }

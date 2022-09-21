@@ -28,5 +28,4 @@ public class GameEvents : MonoBehaviour
             onDoorWayTriggerExit();
         }
     }
-    
 }

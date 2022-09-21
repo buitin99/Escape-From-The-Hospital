@@ -29,6 +29,8 @@ public class FieldOfView : MonoBehaviour {
 	}
 
 
+
+
 	IEnumerator FindTargetsWithDelay(float delay) {
 		while (true) {
 			yield return new WaitForSeconds (delay);
@@ -51,7 +53,8 @@ public class FieldOfView : MonoBehaviour {
 				float dstToTarget = Vector3.Distance (transform.position, target.position);
 				if (!Physics.Raycast (transform.position, dirToTarget, dstToTarget, obstacleMask)) {
 					visibleTargets.Add (target);
-					Debug.Log(visibleTargets);
+					
+					FindObjectOfType<GameManager>().GameOver();
 				}
 			}
 		}
@@ -174,5 +177,4 @@ public class FieldOfView : MonoBehaviour {
 			pointB = _pointB;
 		}
 	}
-
 }
