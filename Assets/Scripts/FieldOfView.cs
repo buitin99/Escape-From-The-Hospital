@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class FieldOfView : MonoBehaviour {
-
 	public float viewRadius;
 	[Range(0,360)]
 	public float viewAngle;
@@ -52,6 +51,7 @@ public class FieldOfView : MonoBehaviour {
 				float dstToTarget = Vector3.Distance (transform.position, target.position);
 				if (!Physics.Raycast (transform.position, dirToTarget, dstToTarget, obstacleMask)) {
 					visibleTargets.Add (target);
+					Debug.Log(visibleTargets);
 				}
 			}
 		}
@@ -147,6 +147,7 @@ public class FieldOfView : MonoBehaviour {
 		if (!angleIsGlobal) {
 			angleInDegrees += transform.eulerAngles.y;
 		}
+
 		return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad),0,Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
 	}
 
