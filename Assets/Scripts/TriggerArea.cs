@@ -5,7 +5,10 @@ using UnityEngine;
 public class TriggerArea : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other) {
-        GameEvents.current.DoorwayTriggerEnter();
+        if (other.CompareTag("Player"))
+        {
+            GameEvents.current.DoorwayTriggerEnter();
+        }
     }
 
     private void OnTriggerExit(Collider other) {
