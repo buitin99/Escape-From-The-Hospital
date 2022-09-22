@@ -6,6 +6,9 @@ public class TriggerEnd : MonoBehaviour
     public GameManager gameManager;
     
     private void OnTriggerEnter(Collider other) {
-        gameManager.CompleteLevel();
+        if (other.CompareTag("Player"))
+        {
+            gameManager.CompleteLevel();
+        }
     }
 }

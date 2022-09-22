@@ -5,11 +5,17 @@ using UnityEngine.InputSystem;
     {   
         private CharacterController _characterController;
         private PlayerInputAction _playerInputActions;
+
+        private Animator _animator;
         [SerializeField]
-        private float _speed = 1f;
+        private float _speed = 0.5f;
         private Vector2 _inputMove;
         [SerializeField]
         private float _forceMagnitude;
+
+        private float _velocity;
+
+        private int _VelocityHash;
 
         private void Awake() {
             _characterController = GetComponent<CharacterController>();
@@ -18,6 +24,11 @@ using UnityEngine.InputSystem;
             _playerInputActions.Player.Move.performed += SetDirMove;
             _playerInputActions.Player.Move.canceled += SetDirMove;
         }
+
+        private void Start() {
+            _animator = GetComponent<Animator>();
+            _VelocityHash = Animator.StringToHash("Velocity");
+        }
         private void OnEnable() {
             _playerInputActions.Enable();   
         }
@@ -25,11 +36,13 @@ using UnityEngine.InputSystem;
         void FixedUpdate()
         {
             _characterController.Move(new Vector3(_inputMove.x,0,_inputMove.y)*_speed);
-
+            _animator.SetFloat(_VelocityHash, _velocity);
         }
         
         private void SetDirMove( InputAction.CallbackContext ctx) {
             _inputMove = ctx.ReadValue<Vector2>();
+            _velocity = _inputMove.y;
+            // Debug.Log(_velocity);
         }
         private void OnControllerColliderHit(ControllerColliderHit hit) 
         {
