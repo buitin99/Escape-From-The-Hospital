@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
             if (!_isGameHashGameOver)
             {
                 _isGameHashGameOver = true;
-                // gameOverScrene.Setup();
+                gameOverScrene.Setup();
             }
     }
 

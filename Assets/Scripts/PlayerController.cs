@@ -34,11 +34,14 @@ using UnityEngine.InputSystem;
             _VelocityHash = Animator.StringToHash("Velocity");
         }
         private void OnEnable() {
-            _playerInputActions.Enable();   
+            _playerInputActions.Enable();
         }
 
         void FixedUpdate()
         {   
+            if(new Vector3(_inputMove.x,0,_inputMove.y) != Vector3.zero) {
+                transform.rotation = Quaternion.LookRotation(new Vector3(_inputMove.x,0,_inputMove.y));
+            }
             _characterController.Move(new Vector3(_inputMove.x,0,_inputMove.y)*_speed);
             _animator.SetFloat(_VelocityHash, _velocity);
         }
@@ -46,7 +49,6 @@ using UnityEngine.InputSystem;
         private void SetDirMove( InputAction.CallbackContext ctx) {
             _inputMove = ctx.ReadValue<Vector2>();
             _velocity = Vector3.Distance(Vector3.zero, new Vector3(_inputMove.x,0,_inputMove.y));
-            // _rotate = Vector3.RotateTowards(Vector3.zero, new Vector3(_inputMove.x,0,_inputMove.y), 0f, 0f);
         }
         private void OnControllerColliderHit(ControllerColliderHit hit) 
         {
