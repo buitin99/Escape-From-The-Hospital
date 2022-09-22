@@ -5,6 +5,6 @@ public class GameOverScrene : MonoBehaviour
 {
     public void Setup()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(true); 
     }
 }

@@ -14,12 +14,12 @@ public class DoorController : MonoBehaviour
 
     private void OnDoorwayOpen()
     {
-        LeanTween.moveLocalY(gameObject, 10f, 1f).setEaseOutQuad();
+        LeanTween.moveLocalY(gameObject, 14.5f, 1f).setEaseOutQuad();
     }
 
     private void OnDoorwayClose()
     {
-        LeanTween.moveLocalY(gameObject, 5.02f, 1f).setEaseInQuad();
+        LeanTween.moveLocalY(gameObject, 6.2645f, 1f).setEaseInQuad();
     }
 
     private void OnDestroy() 

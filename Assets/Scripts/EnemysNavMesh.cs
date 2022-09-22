@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class EnemyNavMesh : MonoBehaviour
+public class EnemysNavMesh : MonoBehaviour
 {
     public Transform[] _listPositionTransforms;
     private int _wayPointIndex;
@@ -21,7 +21,7 @@ public class EnemyNavMesh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(transform.position,_target) < 1)
+        if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
         {
             IterateWayPointIndex();
             UpdateDestination();
