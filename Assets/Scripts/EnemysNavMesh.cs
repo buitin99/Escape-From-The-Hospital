@@ -21,11 +21,16 @@ public class EnemysNavMesh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+        if (!GameManager.Instance._isGameHashGameOver)
         {
-            IterateWayPointIndex();
-            UpdateDestination();
+            if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+            {
+                IterateWayPointIndex();
+                UpdateDestination();
+            }
         }
+        else
+            _navMeshAgent.Stop();
     }
 
     void UpdateDestination()

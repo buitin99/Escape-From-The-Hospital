@@ -17,6 +17,10 @@ using UnityEngine.InputSystem;
 
         private int _VelocityHash;
 
+        private float _rotate;
+
+        private int _RotateHash;
+
         private void Awake() {
             _characterController = GetComponent<CharacterController>();
             _playerInputActions = new PlayerInputAction(); 
@@ -34,15 +38,15 @@ using UnityEngine.InputSystem;
         }
 
         void FixedUpdate()
-        {
+        {   
             _characterController.Move(new Vector3(_inputMove.x,0,_inputMove.y)*_speed);
             _animator.SetFloat(_VelocityHash, _velocity);
         }
         
         private void SetDirMove( InputAction.CallbackContext ctx) {
             _inputMove = ctx.ReadValue<Vector2>();
-            _velocity = _inputMove.y;
-            // Debug.Log(_velocity);
+            _velocity = Vector3.Distance(Vector3.zero, new Vector3(_inputMove.x,0,_inputMove.y));
+            // _rotate = Vector3.RotateTowards(Vector3.zero, new Vector3(_inputMove.x,0,_inputMove.y), 0f, 0f);
         }
         private void OnControllerColliderHit(ControllerColliderHit hit) 
         {
