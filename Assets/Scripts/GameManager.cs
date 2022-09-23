@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,9 +48,15 @@ public class GameManager : MonoBehaviour
             }
     }
 
-    public void CompleteLevel()
+    public void CompleteLevelEnd()
     {
-        completeLevel.SetActive(true);
+        StartCoroutine(CompleteLevel());
+    }
+
+    private IEnumerator CompleteLevel()
+    {
+        yield return new WaitForSeconds(0.8f);
+        SceneManager.LoadScene("CompleteScene");
     }
     public void Restart()
     {
