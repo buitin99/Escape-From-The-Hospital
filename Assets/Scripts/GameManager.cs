@@ -39,16 +39,22 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void GameOver()
+    public void GameOverDisplay()
     {
-            if (!_isGameHashGameOver)
+        StartCoroutine(GameOver());
+    }
+
+    private IEnumerator GameOver()
+    { 
+        if (!_isGameHashGameOver)
             {
                 _isGameHashGameOver = true;
-                gameOverScrene.Setup();
+                yield return new WaitForSeconds(0.1f);
+                SceneManager.LoadScene("GameOverScene");
             }
     }
 
-    public void CompleteLevelEnd()
+    public void CompleteLevelDisplay()
     {
         StartCoroutine(CompleteLevel());
     }

@@ -54,7 +54,7 @@ public class FieldOfView : MonoBehaviour {
 				if (!Physics.Raycast (transform.position, dirToTarget, dstToTarget, obstacleMask)) {
 					visibleTargets.Add (target);
 					
-					FindObjectOfType<GameManager>().GameOver();
+					FindObjectOfType<GameManager>().GameOverDisplay();
 				}
 			}
 		}
