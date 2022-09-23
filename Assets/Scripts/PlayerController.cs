@@ -20,8 +20,39 @@ using System.Collections;
         private Transform _destination;
         [SerializeField]
         private Transform _player; 
+        [SerializeField]
+        private GameObject _key;
+        [SerializeField]
+        private GameObject _triggerArea;
+        private static PlayerController _instance = null;
+        public static PlayerController Instance
+        {
+            get {
+                if (_instance == null)
+                {
+                    _instance = GameObject.FindObjectOfType<PlayerController>();
+                    if (_instance == null)
+                    {
+                        GameObject playerController = new GameObject("playerController");
+                        _instance = playerController.AddComponent<PlayerController>();
+
+                        DontDestroyOnLoad(playerController);
+                    }
+                }
+                return _instance;
+            }
+        }
 
         private void Awake() {
+
+            if(_instance == null)
+            {
+                _instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
             _characterController = GetComponent<CharacterController>();
             _playerInputActions = new PlayerInputAction(); 
             
@@ -70,6 +101,12 @@ using System.Collections;
                 _playerGO.SetActive(false);
                 _player.position = _destination.position;
                 _playerGO.SetActive(true);
+            }
+
+            if (other.CompareTag("Key"))
+            {
+                _key.SetActive(false);
+                _triggerArea.SetActive(true);
             }
         }
 

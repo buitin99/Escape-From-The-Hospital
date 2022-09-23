@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall
   - Teleport
+  - SF_Door
+  - Key
   layers:
   - Default
   - TransparentFX
