@@ -30,7 +30,7 @@ public class EnemysNavMesh : MonoBehaviour
             }
         }
         else
-            _navMeshAgent.Stop();
+            _navMeshAgent.isStopped = true;
     }
 
     void UpdateDestination()

@@ -6,10 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public bool _isGameHashGameOver;
     private static GameManager _instance = null;
-
-    public GameObject completeLevel;
-    public GameOverScrene gameOverScrene;
-
     public static GameManager Instance
     {
         get {
@@ -61,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator CompleteLevel()
     {
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.4f);
         SceneManager.LoadScene("CompleteScene");
     }
     public void Restart()
