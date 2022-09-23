@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1037
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 12290
+  controlID: 5650
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 12291
+  controlID: 5651
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 12292
+  controlID: 5652
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,8 +243,8 @@ MonoBehaviour:
     y: 0
     width: 648
     height: 584
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -430,25 +430,25 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 22b6f6ff
-      m_LastClickedID: -608734
-      m_ExpandedIDs: 1ab8f6ff5ad3f7ff88f6f7ff208af8ffa8a6f8ff9cecf8fffa03f9ff0c0bf9ff1e0bf9ff400bf9ff708efbfffc91fbff1ac8fcff14fbffff2c7200000e9a0000bc9e000068ae00006cae000082ae0000deae000032af0000
+      m_SelectedIDs: f0720000
+      m_LastClickedID: 29424
+      m_ExpandedIDs: 14fbffffee71000044720000d8720000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Receiver
+        m_OriginalName: Receiver
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 29006
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 9}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -681,9 +681,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.9899998, y: 3.04, z: -1.76}
+    m_Target: {x: 26.0882, y: 4.2264, z: -98.4}
     speed: 2
-    m_Value: {x: 3.9899995, y: 3.0399997, z: -1.7599999}
+    m_Value: {x: 26.0882, y: 4.2264, z: -98.4}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -734,9 +734,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.17666519, y: -0.37454525, z: 0.07293036, w: 0.90729624}
   m_Size:
-    m_Target: 3.7014186
+    m_Target: 3.5632038
     speed: 2
-    m_Value: 3.5420275
+    m_Value: 3.5632038
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -783,7 +783,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 204
     y: 73
-    width: 1185
+    width: 637
     height: 563
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -795,14 +795,14 @@ MonoBehaviour:
     - {fileID: 2719278437721830791, guid: 8ba572e113a80c54186bc7f9ae773ddd, type: 2}
     - {fileID: -5553705519395645508, guid: a15a670c80865124897bd495665a4088, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.4075585
+    - e00: 2.1805394
       e01: 0
       e02: 0
-      e03: -19.0233
+      e03: -620.15686
       e10: 0
-      e11: 0.4075585
+      e11: 2.1805394
       e12: 0
-      e13: -33.771156
+      e13: -736.07855
       e20: 0
       e21: 0
       e22: 1
@@ -811,14 +811,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1.0601324
+    - e00: 0.95208335
       e01: 0
       e02: 0
-      e03: 6.289276
+      e03: -51.645844
       e10: 0
-      e11: 1.0601324
+      e11: 0.95208335
       e12: 0
-      e13: 270.61108
+      e13: 185.3573
       e20: 0
       e21: 0
       e22: 1
@@ -847,6 +847,8 @@ MonoBehaviour:
   m_AnimatorController: {fileID: 9100000, guid: 8ba572e113a80c54186bc7f9ae773ddd, type: 2}
   m_BreadCrumbs:
   - m_Target: {fileID: -4073484249751042306, guid: 8ba572e113a80c54186bc7f9ae773ddd, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: 2719278437721830791, guid: 8ba572e113a80c54186bc7f9ae773ddd, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -900,22 +902,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Rust Key
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Rust Key
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\OS\Tin_Project\Escape From The Hospital
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4ae70000
-    m_LastClickedID: 59210
-    m_ExpandedIDs: 00000000027900000479000006790000087900000a7900000c790000767d00001a94000026940000
+    m_SelectedIDs: 7c790000
+    m_LastClickedID: 31100
+    m_ExpandedIDs: 000000007c7900007e79000080790000827900008479000086790000887900008a7900008c790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -943,7 +945,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000027900000479000006790000087900000a7900000c7900004a7b0000767d00001a94000026940000
+    m_ExpandedIDs: 000000007c7900007e79000080790000827900008479000086790000887900008a7900008c790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -970,7 +972,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300002e870000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

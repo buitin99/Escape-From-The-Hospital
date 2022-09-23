@@ -1,25 +1,25 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
     public class PlayerController : MonoBehaviour
     {   
         private CharacterController _characterController;
         private PlayerInputAction _playerInputActions;
-
         private Animator _animator;
         [SerializeField]
         private float _speed = 0.5f;
         private Vector2 _inputMove;
         [SerializeField]
         private float _forceMagnitude;
-
         private float _velocity;
-
         private int _VelocityHash;
-
-        private float _rotate;
-
-        private int _RotateHash;
+        [SerializeField]
+        private GameObject _playerGO;
+        [SerializeField]
+        private Transform _destination;
+        [SerializeField]
+        private Transform _player; 
 
         private void Awake() {
             _characterController = GetComponent<CharacterController>();
@@ -61,6 +61,15 @@ using UnityEngine.InputSystem;
                 forceDirection.Normalize();
 
                 _rg.AddForceAtPosition(forceDirection*_forceMagnitude, transform.position, ForceMode.Impulse);
+            }
+        }
+
+        private void OnTriggerEnter(Collider other) {
+            if (other.CompareTag("Teleport"))
+            {
+                _playerGO.SetActive(false);
+                _player.position = _destination.position;
+                _playerGO.SetActive(true);
             }
         }
 
