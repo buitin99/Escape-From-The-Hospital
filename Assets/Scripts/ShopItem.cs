@@ -10,6 +10,6 @@ public class ShopItem : ScriptableObject
     public string title;
     public string description;
     public Sprite ava;
-    public float price;
+    public int price;
 
 }
