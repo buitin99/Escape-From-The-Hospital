@@ -24,6 +24,11 @@ using System.Collections;
         private GameObject _key;
         [SerializeField]
         private GameObject _triggerArea;
+
+        [SerializeField]
+        private GameObject _triggerLaser;
+        [SerializeField]
+        private GameObject _laser;
         private static PlayerController _instance = null;
         public static PlayerController Instance
         {
@@ -107,6 +112,12 @@ using System.Collections;
             {
                 _key.SetActive(false);
                 _triggerArea.SetActive(true);
+            }
+
+            if (other.CompareTag("TriggerLaser"))
+            {
+                _laser.SetActive(false);
+                _triggerLaser.SetActive(false);
             }
         }
 

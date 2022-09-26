@@ -8,6 +8,7 @@ TagManager:
   - Teleport
   - SF_Door
   - Key
+  - TriggerLaser
   layers:
   - Default
   - TransparentFX

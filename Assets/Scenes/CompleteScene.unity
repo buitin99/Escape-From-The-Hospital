@@ -608,10 +608,10 @@ RectTransform:
   m_Father: {fileID: 1872295571}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.74232423}
+  m_AnchorMin: {x: 0, y: 0.596418}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 99.72278, y: 27.767212}
-  m_SizeDelta: {x: -1078.5544, y: -173.3801}
+  m_AnchoredPosition: {x: 17.52008, y: 52.83716}
+  m_SizeDelta: {x: -389.052, y: -66.9814}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1355103032
 GameObject:
@@ -834,6 +834,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorWheel: {fileID: 89056279}
+  _backPanel: {fileID: 475702286}
+  _homeButton: {fileID: 0}
+  _replayButton: {fileID: 0}
+  _star1: {fileID: 0}
+  _star2: {fileID: 0}
+  _star3: {fileID: 0}
+  _score: {fileID: 0}
+  _levelSuccess: {fileID: 1319310964}
 --- !u!4 &1833793161
 Transform:
   m_ObjectHideFlags: 0
