@@ -1,48 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class ShopManager : MonoBehaviour
 {
     public ShopItem[] shopItems;
-    public GameObject[] shopPanelsGO;
-    public ShopTemplate[] shopPannels;
     public Button[] myPurchaseBtns;
     public TMP_Text coinsUser;
+    public TMP_Text[] price;
     public int coins;
   
     private void Awake() {
-        LoadPannel();
+      
     }
 
     private void Start() {
         coinsUser.text = "CG: " + coins.ToString();
-        for (int i= 0; i < shopPanelsGO.Length; i++)
-        {
-            shopPanelsGO[i].SetActive(true);
-        }
-        CheckPurchaseable();
     }
 
-    public void CheckPurchaseable()
-    {
-        for (int i=0; i < shopItems.Length; i++)
-        {
-            if (coins >= shopItems[i].price)
-                myPurchaseBtns[i].interactable = true;
-            else
-                myPurchaseBtns[i].interactable = false;
-        }
+    private void Update() {
+        // CheckPurchaseable();
     }
+    // public void CheckPurchaseable()
+    // {
+    //     for (int i=0; i < price.Length; i++)
+    //     {
+    //         if (coins >= int.Parse(price[i].GetComponent<TMP_Text>().text))
+    //             myPurchaseBtns[i].interactable = true;
+    //         else
+    //             myPurchaseBtns[i].interactable = false;
+    //     }
+    // }
 
     public void PurchaseItem(int btnNo)
     {
-        if (coins >= shopItems[btnNo].price)
+        if (coins >= int.Parse(price[btnNo].GetComponent<TMP_Text>().text))
         {
-            coins = coins - shopItems[btnNo].price;
+            coins = coins - int.Parse(price[btnNo].GetComponent<TMP_Text>().text);
             coinsUser.text = "CG: " + coins.ToString();
             CheckOwned(btnNo);
         }
@@ -50,21 +46,16 @@ public class ShopManager : MonoBehaviour
 
     public void CheckOwned(int btnNo)
     {
-        for (int i = 0; i < shopItems.Length; i++)
+        for (int i = 0; i < price.Length; i++)
         {
             myPurchaseBtns[btnNo].interactable = false;
             myPurchaseBtns[btnNo].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
         }
     }
     
-    public void LoadPannel()
+
+    public void GoToMainMenu()
     {
-        for (int i = 0; i < shopItems.Length; i++)
-        { 
-            shopPannels[i].titleTxt.text = shopItems[i].title;
-            shopPannels[i].descriptionTxt.text = shopItems[i].description;
-            shopPannels[i].ava.sprite = shopItems[i].ava;
-            shopPannels[i].priceTxt.text = "CG: " + shopItems[i].price.ToString();
-        }
+        SceneManager.LoadScene("StartScene");
     }
 }
