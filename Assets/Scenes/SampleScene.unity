@@ -2552,8 +2552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isGameHashGameOver: 0
-  completeLevel: {fileID: 1652140210}
-  gameOverScrene: {fileID: 386275066}
 --- !u!1 &68833097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,6 +3110,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _forceMagnitude: 2
+  _playerGO: {fileID: 0}
+  _destination: {fileID: 0}
+  _player: {fileID: 0}
+  _key: {fileID: 0}
+  _triggerArea: {fileID: 0}
+  _triggerLaser: {fileID: 0}
+  _laser: {fileID: 0}
 --- !u!95 &239891691
 Animator:
   serializedVersion: 4
@@ -3872,7 +3877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c6b78c8ad01624f872b8dac8d8aaeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 48015838}
 --- !u!43 &426039607
 Mesh:
   m_ObjectHideFlags: 0

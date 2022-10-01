@@ -95,8 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleTxt: {fileID: 7486603148584235244}
-  descriptionTxt: {fileID: 7486603147480544250}
-  ava: {fileID: 7486603147840613299}
   priceTxt: {fileID: 7486603147931039139}
 --- !u!1 &7486603147480544248
 GameObject:
