@@ -7,6 +7,8 @@ public class PlotManager : MonoBehaviour
 {   
     [SerializeField]
     private GameObject _plotManager;
+    [SerializeField]
+    private GameObject _plotImage;
 
     [SerializeField]
     private GameObject[] _plotList;
@@ -31,6 +33,7 @@ public class PlotManager : MonoBehaviour
             _plotList[i].SetActive(false);
         }
         _plotManager.SetActive(false);
+        _plotImage.SetActive(false);
     }
 
 }
