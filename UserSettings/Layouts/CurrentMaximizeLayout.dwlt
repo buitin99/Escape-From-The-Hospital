@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 36876
+  controlID: 46728
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 36877
+  controlID: 46729
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 36878
+  controlID: 46730
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,9 +194,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4a4bfbff
-      m_LastClickedID: -308406
-      m_ExpandedIDs: 7245fbffe274fbffb818ffff022affff0e65ffff1265ffff1865ffffc466ffffca66ffffde66ffffec66ffff0267ffff0867ffff1067ffff1a67ffffb867ffffc467ffffce67ffffd667ffffdc67ffff126dffff9c70ffff1a79ffff3e79ffff4879ffff5079ffff8a7affff947affff7e87ffffd487ffffda87ffffaa8bffffb68bffffc48bffff008cffff168cffff268fffff408fffff468fffff4c8fffff548fffff0692ffff3c92ffffce92ffff14fbffff78710000fa710000da72000014ff0500dcff0500
+      m_SelectedIDs: 58d40d0006d40d00
+      m_LastClickedID: 906246
+      m_ExpandedIDs: 16b2f7ffccc8f7ffc83ef8fff444f8ffc846f8ffce46f8ffd646f8ff8448f8ff8c48f8ffa248f8ffb248f8ffca48f8ffd248f8ffdc48f8ffe848f8ff8849f8ff9649f8ffa249f8ffac49f8ffb449f8ff284ff8ffb452f8ff345bf8ff5a5bf8ff665bf8ff705bf8ffac5cf8ffb85cf8ffa469f8fffc69f8ff046af8ffd66df8ffe46df8fff46df8ff326ef8ff4a6ef8ff5c71f8ff7871f8ff8071f8ff8871f8ff9271f8ff4674f8ff7e74f8ff1275f8ff7245fbff4a4bfbffe274fbff52bffcffb818ffff022affff0e65ffff1265ffff1865ffffc466ffffca66ffffde66ffffec66ffff0267ffff0867ffff1067ffff1a67ffffb867ffffc467ffffce67ffffd667ffffdc67ffff126dffff9c70ffff1a79ffff3e79ffff4879ffff5079ffff8a7affff947affff7e87ffffd487ffffda87ffffaa8bffffb68bffffc48bffff008cffff168cffff268fffff408fffff468fffff4c8fffff548fffff0692ffff3c92ffffce92ffff14fbffff78710000fa710000da72000014ff05007cff0500dcff05008aa60d0076c70d0082d20d009ad20d0010d30d0074d30d00
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -472,9 +472,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 18.138784, y: 11.048582, z: -95.33697}
+    m_Target: {x: 81.48, y: 6.75, z: -120}
     speed: 2
-    m_Value: {x: 18.138784, y: 11.048582, z: -95.33697}
+    m_Value: {x: 81.48, y: 6.75, z: -120}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -523,11 +523,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: 0.087172285, y: -0.8995905, z: 0.21045253, w: 0.37262264}
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 13.266017
+    m_Target: 13.096134
     speed: 2
-    m_Value: 13.266017
+    m_Value: 12.532186
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -846,22 +846,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/lib/01_AssetStore/DoorPackFree/Prefab
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/lib/01_AssetStore/DoorPackFree/Prefab
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\OS\Tin_Project\Escape From The Hospital
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 8}
-    m_SelectedIDs: cc860000
-    m_LastClickedID: 34508
-    m_ExpandedIDs: 00000000a27f0000d47f0000448000008a800000d08600000a8700000e870000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: de7f0000
+    m_LastClickedID: 32734
+    m_ExpandedIDs: 00000000a27f00008a800000d08600000e870000e04e0800
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -889,7 +889,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a27f0000d47f0000448000008a800000d08600000a8700000e870000
+    m_ExpandedIDs: 00000000a27f00008a800000d08600000e870000e04e0800
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -914,9 +914,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 4a4bfbff
-    m_LastClickedInstanceID: -308406
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 58d40d0006d40d00
+    m_LastClickedInstanceID: 906328
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300002e87000072b7000018780000b6c4000056e600003c620100000000009ad30000aa8d0000b08d0000888d0000e87f0000cca80000568d0000b681000088750000749e0000189a00009a970000ca860000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
