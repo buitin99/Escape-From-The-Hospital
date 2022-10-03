@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 46728
+  controlID: 40028
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -79,8 +79,8 @@ MonoBehaviour:
     pluginStates:
     - '{}'
     - '{}'
-    scale: 38
-    fitToScreenEnabled: 0
+    scale: 17
+    fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
     friendlyName: LG G4
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 46729
+  controlID: 40029
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 46730
+  controlID: 40030
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -194,9 +194,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 58d40d0006d40d00
-      m_LastClickedID: 906246
-      m_ExpandedIDs: 16b2f7ffccc8f7ffc83ef8fff444f8ffc846f8ffce46f8ffd646f8ff8448f8ff8c48f8ffa248f8ffb248f8ffca48f8ffd248f8ffdc48f8ffe848f8ff8849f8ff9649f8ffa249f8ffac49f8ffb449f8ff284ff8ffb452f8ff345bf8ff5a5bf8ff665bf8ff705bf8ffac5cf8ffb85cf8ffa469f8fffc69f8ff046af8ffd66df8ffe46df8fff46df8ff326ef8ff4a6ef8ff5c71f8ff7871f8ff8071f8ff8871f8ff9271f8ff4674f8ff7e74f8ff1275f8ff7245fbff4a4bfbffe274fbff52bffcffb818ffff022affff0e65ffff1265ffff1865ffffc466ffffca66ffffde66ffffec66ffff0267ffff0867ffff1067ffff1a67ffffb867ffffc467ffffce67ffffd667ffffdc67ffff126dffff9c70ffff1a79ffff3e79ffff4879ffff5079ffff8a7affff947affff7e87ffffd487ffffda87ffffaa8bffffb68bffffc48bffff008cffff168cffff268fffff408fffff468fffff4c8fffff548fffff0692ffff3c92ffffce92ffff14fbffff78710000fa710000da72000014ff05007cff0500dcff05008aa60d0076c70d0082d20d009ad20d0010d30d0074d30d00
+      m_SelectedIDs: e828faff
+      m_LastClickedID: -382744
+      m_ExpandedIDs: e828faff3a7cfbff507dfbff9c83fbffa083fbffa683fbff7687fbffba93fbffb89afbff8ae5fbffce62fefffa68feffc470feffcc70feffd670feff8672feff9072feffa872feffba72feffd472feffde72feffea72fefff872feff9a73feffaa73feffb873feffc473feffce73feff4479feffd27cfeff5485feff7c85feff8a85feff9685feffd486feffe286feffd093feff2a94feff3494feff0898feff7e9dfeff8e9dfeffa09dfeffe09dfefffa9dfeff0ea1feff2ca1feff36a1feff40a1feff4ca1feff02a4feff3ca4feffd2a4feff5e46ffff7447ffffc04dffffc44dffffca4dffff9a51ffffde5dffff4e63ffff14fbfffffc7000001a720000fa72000066d60000e0d800002adc0000d873060096740600b67406007475060058b5070036b6070008fe0700
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -467,14 +467,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 81.48, y: 6.75, z: -120}
+    m_Target: {x: 31.39, y: 5.082475, z: -115.53297}
     speed: 2
-    m_Value: {x: 81.48, y: 6.75, z: -120}
+    m_Value: {x: 31.39, y: 5.082475, z: -115.53297}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -503,17 +503,17 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -521,17 +521,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.096134
+    m_Target: 9.476977
     speed: 2
-    m_Value: 12.532186
+    m_Value: 9.476977
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 2
     m_SpeedNormalized: 1
@@ -846,22 +846,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/lib/AK STUDIO ART/Bed Wood Oak/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/lib/AK STUDIO ART/Bed Wood Oak/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\OS\Tin_Project\Escape From The Hospital
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: de7f0000
-    m_LastClickedID: 32734
-    m_ExpandedIDs: 00000000a27f00008a800000d08600000e870000e04e0800
+    scrollPos: {x: 0, y: 60}
+    m_SelectedIDs: 3cfd0000
+    m_LastClickedID: 64828
+    m_ExpandedIDs: 00000000cc7d0000ce7d0000d07d000060800000368200006e8200007882000064a20000fede000000df00003afd000056fd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -889,7 +889,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a27f00008a800000d08600000e870000e04e0800
+    m_ExpandedIDs: 00000000cc7d0000ce7d0000d07d000060800000368200006e8200007882000064a20000fede000000df000056fd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -914,10 +914,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 58d40d0006d40d00
-    m_LastClickedInstanceID: 906328
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300002e87000072b7000018780000b6c4000056e600003c620100000000009ad30000aa8d0000b08d0000888d0000e87f0000cca80000568d0000b681000088750000749e0000189a00009a970000ca860000
+    m_SelectedInstanceIDs: e828faff
+    m_LastClickedInstanceID: -382744
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300002e87000072b7000018780000b6c4000056e600003c6201009ad30000aa8d0000b08d0000888d0000e87f0000cca80000568d0000b681000088750000749e0000189a00009a970000ca86000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -967,7 +967,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 659
-    width: 1489
+    width: 1339
     height: 380
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
