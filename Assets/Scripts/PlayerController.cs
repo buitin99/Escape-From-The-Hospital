@@ -68,6 +68,7 @@ using System.Collections;
         private void Start() {
             _animator = GetComponent<Animator>();
             _VelocityHash = Animator.StringToHash("Velocity");
+            Debug.Log(_VelocityHash);
         }
         private void OnEnable() {
             _playerInputActions.Enable();
