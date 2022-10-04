@@ -44,6 +44,13 @@ using TMPro;
 
         [SerializeField]
         private GameObject _plotManager;
+        [SerializeField]
+        private GameObject _electric;
+        [SerializeField]
+        private GameObject _plotActive;
+
+        [SerializeField]
+        private GameObject _image;
         private static PlayerController _instance = null;
         public static PlayerController Instance
         {
@@ -133,12 +140,15 @@ using TMPro;
             {
                 _laser.SetActive(false);
                 _triggerLaser.SetActive(false);
+                _electric.SetActive(false);
             }
 
             if (other.CompareTag("2"))
             {
                 StartCoroutine(PlotAllGame());
                 _plotManager.SetActive(true);
+                _plotActive.SetActive(false);
+                _image.SetActive(true);
             }    
         }
 
@@ -158,6 +168,7 @@ using TMPro;
             }
             _plotManager.SetActive(false);
             _plotImage.SetActive(false);
+            _image.SetActive(false);
         }
 
     }

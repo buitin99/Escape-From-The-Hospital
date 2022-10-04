@@ -18,6 +18,9 @@ public class PlotManager : MonoBehaviour
     [SerializeField]
     private TMP_Text[] _plotTextList;
 
+    [SerializeField]
+    private GameObject _image;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,7 @@ public class PlotManager : MonoBehaviour
         }
         _plotManager.SetActive(false);
         _plotImage.SetActive(false);
+        _image.SetActive(false);
     }
 
 }
