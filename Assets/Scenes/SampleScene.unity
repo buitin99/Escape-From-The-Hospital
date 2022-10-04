@@ -3122,6 +3122,9 @@ MonoBehaviour:
   _plotList: []
   _plotImage: {fileID: 0}
   _plotManager: {fileID: 0}
+  _electric: {fileID: 0}
+  _plotActive: {fileID: 0}
+  _image: {fileID: 0}
 --- !u!95 &239891691
 Animator:
   serializedVersion: 4
