@@ -3117,6 +3117,11 @@ MonoBehaviour:
   _triggerArea: {fileID: 0}
   _triggerLaser: {fileID: 0}
   _laser: {fileID: 0}
+  _plotTextList: []
+  _plotText: {fileID: 0}
+  _plotList: []
+  _plotImage: {fileID: 0}
+  _plotManager: {fileID: 0}
 --- !u!95 &239891691
 Animator:
   serializedVersion: 4

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using TMPro;
 
     public class PlayerController : MonoBehaviour
     {   
@@ -29,6 +30,20 @@ using System.Collections;
         private GameObject _triggerLaser;
         [SerializeField]
         private GameObject _laser;
+        [SerializeField]
+        private TMP_Text[] _plotTextList;
+
+        [SerializeField]
+        private TMP_Text _plotText;
+
+        [SerializeField]
+        private GameObject[] _plotList;
+
+        [SerializeField]
+        private GameObject _plotImage;
+
+        [SerializeField]
+        private GameObject _plotManager;
         private static PlayerController _instance = null;
         public static PlayerController Instance
         {
@@ -119,11 +134,30 @@ using System.Collections;
                 _laser.SetActive(false);
                 _triggerLaser.SetActive(false);
             }
+
+            if (other.CompareTag("2"))
+            {
+                StartCoroutine(PlotAllGame());
+                _plotManager.SetActive(true);
+            }    
         }
 
         private void OnDestroy() {
             _playerInputActions.Player.Move.performed -= SetDirMove;
             _playerInputActions.Player.Move.canceled -= SetDirMove;
+        }
+
+        private IEnumerator PlotAllGame( )
+        {
+            for (int i = 0; i < _plotTextList.Length; i++)
+            {
+                _plotImage.SetActive(true);
+                _plotText.text = _plotTextList[i].text;
+                yield return new WaitForSeconds(2);
+                _plotList[i].SetActive(false);
+            }
+            _plotManager.SetActive(false);
+            _plotImage.SetActive(false);
         }
 
     }

@@ -9,6 +9,8 @@ TagManager:
   - SF_Door
   - Key
   - TriggerLaser
+  - FxTemporaire
+  - 2
   layers:
   - Default
   - TransparentFX
