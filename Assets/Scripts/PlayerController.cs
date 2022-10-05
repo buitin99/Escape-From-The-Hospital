@@ -51,6 +51,9 @@ using TMPro;
 
         [SerializeField]
         private GameObject _image;
+
+        [SerializeField]
+        private GameObject _doorLv4;
         private static PlayerController _instance = null;
         public static PlayerController Instance
         {
@@ -149,7 +152,12 @@ using TMPro;
                 _plotManager.SetActive(true);
                 _plotActive.SetActive(false);
                 _image.SetActive(true);
-            }    
+            }
+
+            if (other.CompareTag("DoorLv4")) 
+            {
+                _doorLv4.transform.rotation = Quaternion.Euler(-90,0,-140f);
+            }   
         }
 
         private void OnDestroy() {

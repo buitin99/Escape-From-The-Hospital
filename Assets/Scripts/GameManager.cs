@@ -5,6 +5,8 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public bool _isGameHashGameOver;
+
+    public int _id;
     private static GameManager _instance = null;
     public static GameManager Instance
     {
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Awake() {
+    private void Awake() {;
         if (_instance == null)
         {
             _instance = this;
@@ -62,6 +64,11 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(_id);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(_id+1);
     }
 }
