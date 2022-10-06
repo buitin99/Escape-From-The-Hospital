@@ -54,6 +54,8 @@ using TMPro;
 
         [SerializeField]
         private GameObject _doorLv4;
+
+        public int id;
         private static PlayerController _instance = null;
         public static PlayerController Instance
         {

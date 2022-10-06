@@ -4,9 +4,9 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    private string[] stringLevel = {"Scenes/Level1","Scenes/Level2","Scenes/Level3"};
     public bool _isGameHashGameOver;
 
-    public int _id;
     private static GameManager _instance = null;
     public static GameManager Instance
     {
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            // DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(transform.root.gameObject);
         }
         else
         {
@@ -62,13 +62,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         SceneManager.LoadScene("CompleteScene");
     }
-    public void Restart()
+
+    public string SceneTransitionLevel()
     {
-        SceneManager.LoadScene(_id);
+        return stringLevel[LoadScene.id];
     }
 
-    public void NextLevel()
-    {
-        SceneManager.LoadScene(_id+1);
-    }
 }
