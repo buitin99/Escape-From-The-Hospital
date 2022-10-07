@@ -93,11 +93,13 @@ using TMPro;
         }
 
         private void Start() {
+            // FindObjectOfType<AudioManager>().Stop("Theme");
             _animator = GetComponent<Animator>();
             _VelocityHash = Animator.StringToHash("Velocity");
         }
         private void OnEnable() {
             _playerInputActions.Enable();
+            // FindObjectOfType<AudioManager>().Play("Horror");
         }
 
         void FixedUpdate()

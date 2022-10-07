@@ -38,5 +38,15 @@ public class LoadScene : MonoBehaviour
         }
     }
 
+    public void SceneShop()
+    {
+        SceneManager.LoadScene("Scenes/ShopGame");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Scenes/StartScene");
+    }
+
 
 }
