@@ -12,6 +12,7 @@ public class ShopManager : MonoBehaviour
     public TMP_Text coinsUser;
     public TMP_Text[] price;
     public int coins;
+    public int totalCoins;
     public List<int> Owner;
 
     public GameObject[] ButtonOwner;
@@ -58,15 +59,12 @@ public class ShopManager : MonoBehaviour
     }
 
     private void Start() {
+        coins = PlayerPrefs.GetInt("Coins",coins);
         coinsUser.text = "CG: " + coins.ToString();
         
-        // foreach(int id in Owner)
-        // {
-            currentCharactersIndex = PlayerPrefs.GetInt("BuyCharacters", -1);
-            myPurchaseBtns[currentCharactersIndex].interactable = false;
-            myPurchaseBtns[currentCharactersIndex].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
-        // }
-
+        currentCharactersIndex = PlayerPrefs.GetInt("BuyCharacters", -1);
+        myPurchaseBtns[currentCharactersIndex].interactable = false;
+        myPurchaseBtns[currentCharactersIndex].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
     }
 
     private void Update() {
@@ -88,6 +86,7 @@ public class ShopManager : MonoBehaviour
         if (coins >= int.Parse(price[btnNo].GetComponent<TMP_Text>().text))
         {
             coins = coins - int.Parse(price[btnNo].GetComponent<TMP_Text>().text);
+            PlayerPrefs.SetInt("Coins",coins);
             coinsUser.text = "CG: " + coins.ToString();
             PlayerPrefs.SetInt("BuyCharacters",btnNo);
             Owner.Add(btnNo);
