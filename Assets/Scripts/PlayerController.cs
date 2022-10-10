@@ -55,6 +55,10 @@ using TMPro;
         [SerializeField]
         private GameObject _doorLv4;
 
+        [SerializeField]
+        private GameObject _triggerCameraOn;
+
+
         public int id;
         private static PlayerController _instance = null;
         public static PlayerController Instance
@@ -161,6 +165,7 @@ using TMPro;
             if (other.CompareTag("DoorLv4")) 
             {
                 _doorLv4.transform.rotation = Quaternion.Euler(-90,0,-140f);
+                _triggerCameraOn.SetActive(true);
             }   
         }
 

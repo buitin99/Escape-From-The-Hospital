@@ -3126,6 +3126,7 @@ MonoBehaviour:
   _plotActive: {fileID: 0}
   _image: {fileID: 0}
   _doorLv4: {fileID: 0}
+  _triggerCameraOn: {fileID: 0}
   id: 0
 --- !u!95 &239891691
 Animator:

@@ -27,6 +27,11 @@ public class StartSceneController : MonoBehaviour
        SceneManager.LoadScene("ShopGame"); 
     }
 
+    public void GoToCharacters()
+    {
+        SceneManager.LoadScene("CharacterScene");
+    }
+
     private void OnDestroy() {
         _playerInputAction.Player.Move.performed -= StartGame;
         _playerInputAction.Player.Move.canceled -= StartGame;
