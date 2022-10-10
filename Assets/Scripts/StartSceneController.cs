@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class StartSceneController : MonoBehaviour
 {
     private PlayerInputAction _playerInputAction;
+    private string[] stringLevel = {"Scenes/Level1","Scenes/Level2","Scenes/Level3"};
     
     private void Awake() {
         _playerInputAction = new PlayerInputAction();
@@ -19,7 +20,7 @@ public class StartSceneController : MonoBehaviour
     }
 
     private void StartGame(InputAction.CallbackContext ctx) {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(stringLevel[PlayerPrefs.GetInt("SelectedLevel",LoadScene.id)]);
     }
 
     public void GoToShopGame()
