@@ -23,52 +23,52 @@ public class ShopManager : MonoBehaviour
 
     public int currentCharactersIndex;
 
-    private static ShopManager instance = null;
+    // private static ShopManager instance = null;
 
-     public static ShopManager Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    // Find singleton of this type in the scene
-                    var instance = GameObject.FindObjectOfType<ShopManager>();
+    //  public static ShopManager Instance
+    //     {
+    //         get
+    //         {
+    //             if (instance == null)
+    //             {
+    //                 // Find singleton of this type in the scene
+    //                 var instance = GameObject.FindObjectOfType<ShopManager>();
 
-                    // If there is no singleton object in the scene, we have to add one
-                    if (instance == null)
-                    {
-                        GameObject obj = new GameObject("Unity Singleton");
-                        instance = obj.AddComponent<ShopManager>();
+    //                 // If there is no singleton object in the scene, we have to add one
+    //                 if (instance == null)
+    //                 {
+    //                     GameObject obj = new GameObject("Unity Singleton");
+    //                     instance = obj.AddComponent<ShopManager>();
 
-                        // The singleton object shouldn't be destroyed when we switch between scenes
-                        DontDestroyOnLoad(obj);
-                    }
-                }
+    //                     // The singleton object shouldn't be destroyed when we switch between scenes
+    //                     DontDestroyOnLoad(obj);
+    //                 }
+    //             }
 
-                return instance;
-            }
-        }
+    //             return instance;
+    //         }
+    //     }
 
-    private void Awake() {
-       if (instance == null)
-            {
-                instance = this;
-                // The singleton object shouldn't be destroyed when we switch between scenes
-                DontDestroyOnLoad(this.gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-    }
+    // private void Awake() {
+    //    if (instance == null)
+    //         {
+    //             instance = this;
+    //             // The singleton object shouldn't be destroyed when we switch between scenes
+    //             DontDestroyOnLoad(this.gameObject);
+    //         }
+    //         else
+    //         {
+    //             Destroy(gameObject);
+    //         }
+    // }
 
     private void Start() {
         coins = PlayerPrefs.GetInt("Coins",coins);
         coinsUser.text = "CG: " + coins.ToString();
         
-        currentCharactersIndex = PlayerPrefs.GetInt("BuyCharacters", -1);
-        myPurchaseBtns[currentCharactersIndex].interactable = false;
-        myPurchaseBtns[currentCharactersIndex].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
+        // currentCharactersIndex = PlayerPrefs.GetInt("BuyCharacters", -1);
+        // myPurchaseBtns[currentCharactersIndex].interactable = false;
+        // myPurchaseBtns[currentCharactersIndex].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
 
         if (items == null || items.Length <= 0) return;
 
@@ -104,15 +104,16 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseItem(int btnNo)
     {
-        if (coins >= int.Parse(price[btnNo].GetComponent<TMP_Text>().text))
+        if (coins >= int.Parse(price[btnNo-1].GetComponent<TMP_Text>().text))
         {
-            coins = coins - int.Parse(price[btnNo].GetComponent<TMP_Text>().text);
+            coins = coins - int.Parse(price[btnNo-1].GetComponent<TMP_Text>().text);
             PlayerPrefs.SetInt("Coins",coins);
             coinsUser.text = "CG: " + coins.ToString();
             PlayerPrefs.SetInt("BuyCharacters",btnNo);
-            string temp = PlayerPrefs.GetString("BuyId",""+btnNo);
+            // string temp = PlayerPrefs.GetString("BuyId",""+btnNo);
 
-            PlayerPrefs.SetInt(PrefConst.PLAYER_PEFIX+btnNo, 1);
+            Debug.Log("Abc");
+            PlayerPrefs.SetInt(PrefConst.PLAYER_PEFIX+btnNo,0);
 
             Owner.Add(btnNo);
             CheckOwned(btnNo);
@@ -121,8 +122,8 @@ public class ShopManager : MonoBehaviour
 
     public void CheckOwned(int btnNo)
     {   
-        myPurchaseBtns[btnNo].interactable = false;
-        myPurchaseBtns[btnNo].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
+        myPurchaseBtns[btnNo-1].interactable = false;
+        myPurchaseBtns[btnNo-1].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
     }
 
     

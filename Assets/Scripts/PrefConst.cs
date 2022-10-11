@@ -9,6 +9,8 @@ public class PrefConst
 
    public const string COINS_KEY = "coins";
 
+   public const string CHANGED_CHARACTER = "SelectedCharacters";
+
 
 
 }
