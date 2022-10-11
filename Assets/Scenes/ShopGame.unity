@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5000
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d3d4bfd2e28a5e49bd15c83184f3475, type: 2}
   m_sharedMaterial: {fileID: -1744406473998596839, guid: 4d3d4bfd2e28a5e49bd15c83184f3475, type: 2}
@@ -4965,7 +4965,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d3d4bfd2e28a5e49bd15c83184f3475, type: 2}
   m_sharedMaterial: {fileID: -1744406473998596839, guid: 4d3d4bfd2e28a5e49bd15c83184f3475, type: 2}
@@ -6195,7 +6195,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3000
+  m_text: -3000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d3d4bfd2e28a5e49bd15c83184f3475, type: 2}
   m_sharedMaterial: {fileID: -1744406473998596839, guid: 4d3d4bfd2e28a5e49bd15c83184f3475, type: 2}
@@ -7008,7 +7008,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4000
+  m_text: 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d3d4bfd2e28a5e49bd15c83184f3475, type: 2}
   m_sharedMaterial: {fileID: -1744406473998596839, guid: 4d3d4bfd2e28a5e49bd15c83184f3475, type: 2}
@@ -7201,7 +7201,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb44c55124f37a94eae0c66603f79e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopItems: []
+  shopItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  items:
+  - price: 3000
+    player: {fileID: -4434854919875052363, guid: f19605acd45f2034fb9bcf8c09803a0e, type: 3}
+  - price: 5000
+    player: {fileID: -4538867320620674769, guid: 28390b988cf0923419995f8a918a6c06, type: 3}
+  - price: 8000
+    player: {fileID: -2449746978085945288, guid: a335d4b6501bd044fa19d31062affbfc, type: 3}
+  - price: 10000
+    player: {fileID: 4874948297748566115, guid: b9199a168fb411145bce14cdaafa640a, type: 3}
+  - price: 12000
+    player: {fileID: -2469468501332935096, guid: 7f02bceefc2600e4da82e2666e17eff8, type: 3}
   myPurchaseBtns:
   - {fileID: 848939715}
   - {fileID: 1785612374}
