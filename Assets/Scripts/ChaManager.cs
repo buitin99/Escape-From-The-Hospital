@@ -16,28 +16,31 @@ public class ChaManager : MonoBehaviour
 
       for (int i = 0; i < btn.Length; i++)
       {
-         if (i == 0)
+
+      if (PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID) == 0)
          {
-            btn[0].transform.GetChild(0).GetComponent<TMP_Text>().text = "OWNED";
+            btn[0].transform.GetChild(0).GetComponent<TMP_Text>().text = "ACTIVE";
+
             if (!btn[i].transform.GetChild(0).GetComponent<TMP_Text>().text.Equals("ACTIVE"))
             {
                btn[0].transform.GetChild(0).GetComponent<TMP_Text>().text = "ACTIVE";
-            }    
-         }else{
-               if (!PlayerPrefs.HasKey(PrefConst.PLAYER_PEFIX + i))
+            }
+         }
+         if (i == 0)
+         {
+            btn[0].transform.GetChild(0).GetComponent<TMP_Text>().text = "OWNED";    
+         }
+         else
+         {
+            btn[PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID)].transform.GetChild(0).GetComponent<TMP_Text>().text = "ACTIVE";
+
+            if (!PlayerPrefs.HasKey(PrefConst.PLAYER_PEFIX + i))
             {
                btn[i].transform.GetChild(0).GetComponent<TMP_Text>().text = "NOT OWNED";
                btn[i].interactable = false;
             }else
             {
-               if (PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID) == i)
-               {
-                  btn[i].transform.GetChild(0).GetComponent<TMP_Text>().text = "ACTIVE";
-               }
-               else
-               {
-                  btn[i].transform.GetChild(0).GetComponent<TMP_Text>().text = "OWNED";
-               }
+               btn[i].transform.GetChild(0).GetComponent<TMP_Text>().text = "OWNED";
             }
          } 
       }
@@ -45,12 +48,21 @@ public class ChaManager : MonoBehaviour
 
    public void ChangeCharacter(int id)
    {
-      btn[PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID)].transform.GetChild(0).GetComponent<TMP_Text>().text = "OWNED";
-      if(PlayerPrefs.HasKey(PrefConst.PLAYER_PEFIX + id) || id == 0)
+      if (id==0)
       {
+         btn[PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID)].transform.GetChild(0).GetComponent<TMP_Text>().text = "OWNED";
          btn[id].transform.GetChild(0).GetComponent<TMP_Text>().text = "ACTIVE";
          PlayerPrefs.SetInt(PrefConst.CHANGED_CHARACTER, id);
          PlayerPrefs.SetInt(PrefConst.CUR_PLAYER_ID, id);
+      }else
+      {
+         btn[PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID)].transform.GetChild(0).GetComponent<TMP_Text>().text = "OWNED";
+         if(PlayerPrefs.HasKey(PrefConst.PLAYER_PEFIX + id))
+         {
+            btn[id].transform.GetChild(0).GetComponent<TMP_Text>().text = "ACTIVE";
+            PlayerPrefs.SetInt(PrefConst.CHANGED_CHARACTER, id);
+            PlayerPrefs.SetInt(PrefConst.CUR_PLAYER_ID, id);
+         }
       }
    }
 
