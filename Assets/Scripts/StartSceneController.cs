@@ -30,7 +30,7 @@ public class StartSceneController : MonoBehaviour
 
     public void GoToCharacters()
     {
-        SceneManager.LoadScene("CharacterScene");
+        SceneManager.LoadScene("CharactersGameMain");
     }
 
     private void OnDestroy() {
