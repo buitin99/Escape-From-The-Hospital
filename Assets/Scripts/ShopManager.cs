@@ -10,7 +10,6 @@ public class ShopManager : MonoBehaviour
 {
     public ShopItem[] shopItems;
 
-    public ShopItems[] items;
     public Button[] myPurchaseBtns;
     public TMP_Text coinsUser;
     public TMP_Text[] price;
@@ -70,17 +69,13 @@ public class ShopManager : MonoBehaviour
         // myPurchaseBtns[currentCharactersIndex].interactable = false;
         // myPurchaseBtns[currentCharactersIndex].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
 
-        if (items == null || items.Length <= 0) return;
-
-        for (int i = 0; i < myPurchaseBtns.Length; i++)
-        {
-                if (PlayerPrefs.HasKey(PrefConst.PLAYER_PEFIX + i))
-                {
-                    myPurchaseBtns[i].interactable = false;
-                    myPurchaseBtns[i].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
-                }
-
-            // }
+        for (int i = 0; i < myPurchaseBtns.Length+1; i++)
+        {  
+            if (PlayerPrefs.HasKey(PrefConst.PLAYER_PEFIX+i))
+            {
+                myPurchaseBtns[i-1].interactable = false;
+                myPurchaseBtns[i-1].transform.GetChild(0).GetComponent<TMP_Text>().text = "Owned";
+            }
         } 
     }
 
@@ -110,12 +105,7 @@ public class ShopManager : MonoBehaviour
             PlayerPrefs.SetInt("Coins",coins);
             coinsUser.text = "CG: " + coins.ToString();
             PlayerPrefs.SetInt("BuyCharacters",btnNo);
-            // string temp = PlayerPrefs.GetString("BuyId",""+btnNo);
-
-            Debug.Log("Abc");
-            PlayerPrefs.SetInt(PrefConst.PLAYER_PEFIX+btnNo,0);
-
-            Owner.Add(btnNo);
+            PlayerPrefs.SetInt(PrefConst.PLAYER_PEFIX+btnNo,1);
             CheckOwned(btnNo);
         }
     }
@@ -133,12 +123,4 @@ public class ShopManager : MonoBehaviour
     }
   
 }
-[System.Serializable]
-public class ShopItems
-{
-    public int price;
-    public PlayerController player;
-
-}
-
 

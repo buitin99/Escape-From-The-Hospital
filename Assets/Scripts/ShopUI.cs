@@ -21,22 +21,4 @@ public class ShopUI : MonoBehaviour
     }
 
     
-    public void UpdateUI(ShopItems item, int shopItemsId)
-    {
-        if (item == null) return;
-
-        bool isUnlocked = Pref.GetBool(PrefConst.PLAYER_PEFIX + shopItemsId);
-
-        if (isUnlocked)
-        {
-            if(price)
-            price.text = "OWNED";
-        }
-        else
-        {
-            if(price)
-                price.text = item.price.ToString();
-        }
-
-    } 
 }
