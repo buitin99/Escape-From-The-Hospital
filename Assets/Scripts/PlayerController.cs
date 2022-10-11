@@ -58,6 +58,7 @@ using TMPro;
         [SerializeField]
         private GameObject _triggerCameraOn;
 
+        public GameObject[] choiceCameraFreeLook;
 
         public int id;
         private static PlayerController _instance = null;
@@ -100,6 +101,14 @@ using TMPro;
             // FindObjectOfType<AudioManager>().Stop("Theme");
             _animator = GetComponent<Animator>();
             _VelocityHash = Animator.StringToHash("Velocity");
+
+            for (int i = 0; i < choiceCameraFreeLook.Length; i++)
+            {
+                if (i == PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID))
+                {
+                    choiceCameraFreeLook[i].SetActive(true);
+                }
+            }
         }
         private void OnEnable() {
             _playerInputActions.Enable();
