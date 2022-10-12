@@ -128,6 +128,7 @@ MonoBehaviour:
   _image: {fileID: 0}
   _doorLv4: {fileID: 0}
   _triggerCameraOn: {fileID: 0}
+  choiceCameraFreeLook: []
   id: 0
 --- !u!1 &7486603147480544248
 GameObject:

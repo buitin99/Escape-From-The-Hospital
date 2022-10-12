@@ -13,6 +13,8 @@ TagManager:
   - 2
   - DoorLv4
   - EnemyCamera
+  - Invisible
+  - Shoes
   layers:
   - Default
   - TransparentFX

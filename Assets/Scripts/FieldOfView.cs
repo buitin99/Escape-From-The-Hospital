@@ -51,7 +51,10 @@ public class FieldOfView : MonoBehaviour {
 			Vector3 dirToTarget = (target.position - transform.position).normalized;
 			if (Vector3.Angle (transform.forward, dirToTarget) < viewAngle / 2) {
 				float dstToTarget = Vector3.Distance (transform.position, target.position);
-				if (!Physics.Raycast (transform.position, dirToTarget, dstToTarget, obstacleMask)) {
+				RaycastHit hitInfo;
+				if (!Physics.Raycast (transform.position, dirToTarget, out hitInfo, dstToTarget, obstacleMask)) {
+					// if(hitInfo.transform.GetComponent<PlayerPowerUp>().Invisible()) return;
+					if(FindObjectOfType<PlayerPowerUp>().Invisible()) return;
 					visibleTargets.Add (target);
 					
 					FindObjectOfType<GameManager>().GameOverDisplay();

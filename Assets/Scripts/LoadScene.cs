@@ -14,6 +14,7 @@ public class LoadScene : MonoBehaviour
     public void SceneCurrent()
     {
       SceneManager.LoadScene(GameManager.Instance.SceneTransitionLevel());
+      GameManager.Instance._isGameHashGameOver = false;
       if (id != 0)
       {
         id--;

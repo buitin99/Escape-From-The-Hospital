@@ -45,11 +45,11 @@ public class GameManager : MonoBehaviour
     private IEnumerator GameOver()
     { 
         if (!_isGameHashGameOver)
-            {
-                _isGameHashGameOver = true;
-                yield return new WaitForSeconds(0.1f);
-                SceneManager.LoadScene("GameOverScene");
-            }
+        {
+            _isGameHashGameOver = true;
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.LoadScene("LoseScene");
+        }  
     }
 
     public void CompleteLevelDisplay()
