@@ -10,11 +10,13 @@ public class EnemysNavMesh : MonoBehaviour
     private int _wayPointIndex;
     private Vector3 _target;
     private NavMeshAgent _navMeshAgent;
+    private CharacterController _characterController;
 
     // Start is called before the first frame update
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _characterController = FindObjectOfType<CharacterController>();
         UpdateDestination();
     }
 
@@ -23,11 +25,18 @@ public class EnemysNavMesh : MonoBehaviour
     {
         if (!GameManager.Instance._isGameHashGameOver)
         {
-            if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+            if(!TriggerCameraFollow.isTrigger)
             {
-                IterateWayPointIndex();
-                UpdateDestination();
+                if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+                {
+                    IterateWayPointIndex();
+                    UpdateDestination();
+                }
             }
+            else if (TriggerCameraFollow.isTrigger)
+            {
+                _navMeshAgent.SetDestination(_characterController.transform.position);
+            }  
         }
         else
             _navMeshAgent.isStopped = true;

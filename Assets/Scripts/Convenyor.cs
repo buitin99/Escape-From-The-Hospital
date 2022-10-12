@@ -6,7 +6,8 @@ public class Convenyor : MonoBehaviour
 {
     public LayerMask layer;
     CharacterController _characterController;
-    public float speed;
+    [SerializeField]
+    private float _speed = 0.0001f;
     Rigidbody rb;
     Vector3 pos;
     // Start is called before the first frame update
@@ -20,7 +21,6 @@ public class Convenyor : MonoBehaviour
     private void Update() 
     {
         pos = rb.position;
-        Debug.Log(pos);
         // rb.position += Vector3.back*speed*Time.deltaTime;
         // rb.MovePosition(pos); 
                 
@@ -28,7 +28,8 @@ public class Convenyor : MonoBehaviour
 
      private void OnTriggerStay(Collider other) {    
         if((layer & (1 << other.gameObject.layer)) != 0) {
-            _characterController.Move(pos*0.0001f); 
+            _characterController.Move(pos*_speed); 
+            Debug.Log(_characterController.transform.position.ToString());
         }
-     }
     }
+}

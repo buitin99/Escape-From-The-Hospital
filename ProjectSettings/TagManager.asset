@@ -12,6 +12,7 @@ TagManager:
   - FxTemporaire
   - 2
   - DoorLv4
+  - EnemyCamera
   layers:
   - Default
   - TransparentFX
