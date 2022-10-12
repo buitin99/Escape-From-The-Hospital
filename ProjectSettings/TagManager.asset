@@ -15,6 +15,7 @@ TagManager:
   - EnemyCamera
   - Invisible
   - Shoes
+  - Potion
   layers:
   - Default
   - TransparentFX
