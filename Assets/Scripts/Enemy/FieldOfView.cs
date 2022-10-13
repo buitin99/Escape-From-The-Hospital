@@ -54,10 +54,12 @@ public class FieldOfView : MonoBehaviour {
 				RaycastHit hitInfo;
 				if (!Physics.Raycast (transform.position, dirToTarget, out hitInfo, dstToTarget, obstacleMask)) {
 					// if(hitInfo.transform.GetComponent<PlayerPowerUp>().Invisible()) return;
-					if(FindObjectOfType<PlayerPowerUp>().Invisible()) return;
-					visibleTargets.Add (target);
-					
-					FindObjectOfType<GameManager>().GameOverDisplay();
+					// if(FindObjectOfType<PlayerPowerUp>().Invisible())
+					if (!FindObjectOfType<PlayerPowerUp>().Invisible())
+					{
+						visibleTargets.Add (target);
+						FindObjectOfType<GameManager>().GameOverDisplay();
+					}
 				}
 			}
 		}

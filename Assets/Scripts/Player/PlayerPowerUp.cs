@@ -14,7 +14,7 @@ public class PlayerPowerUp : MonoBehaviour
     }
 
     private void Update() {
-        if(isinvisible) {
+        if(Invisible()) {
             if(Time.time >= timeFootStep) {
                 GameObject f = Instantiate(footsp, transform.position, transform.rotation);
                 Destroy(f, 3f);
@@ -24,8 +24,7 @@ public class PlayerPowerUp : MonoBehaviour
     }
 
     public bool Invisible() {
-        return isinvisible =  true;   
-    }
-
-    
+        return isinvisible = InvisiblePlayer.isInvisible ? true : false;
+        // return isinvisible =  true;   
+    }    
 }
