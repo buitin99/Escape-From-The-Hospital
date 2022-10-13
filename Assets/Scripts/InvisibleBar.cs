@@ -17,7 +17,8 @@ public class InvisibleBar : MonoBehaviour
 
     private void Update() 
     {
-        transform.rotation = Quaternion.LookRotation(transform.position - _cam.transform.position);        
+        transform.rotation = Quaternion.LookRotation(transform.position - _cam.transform.position);
+        // transform.rotation = Quaternion.identity;        
     }
     public void UpdateInvisibleBar(float currentInvisible, float maxInvisible)
     {
