@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class StartSceneController : MonoBehaviour
 {
     private PlayerInputAction _playerInputAction;
-    private string[] stringLevel = {"Scenes/Level1","Scenes/Level2","Scenes/Level3"};
+    private string[] stringLevel = {"Scenes/Level1","Scenes/Level2","Scenes/Level3","Scenes/Level4","Scenes/Level5","Scenes/Level6"};
     
     private void Awake() {
         _playerInputAction = new PlayerInputAction();

@@ -3739,7 +3739,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!21 &378360617
+--- !u!21 &385738561
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -9476,6 +9476,11 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1617186810}
+--- !u!1 &1045745362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8061856326590533623, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+  m_PrefabInstance: {fileID: 7776153964876828847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1058050108
 GameObject:
   m_ObjectHideFlags: 0
@@ -21594,9 +21599,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adam
       objectReference: {fileID: 0}
+    - target: {fileID: 7434065318440573825, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7434065318528712665, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
       propertyPath: m_Name
       value: James
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434065318528712665, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7434065318923831843, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
       propertyPath: m_Name
@@ -21614,13 +21627,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kate
       objectReference: {fileID: 0}
+    - target: {fileID: 7434065318961539763, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7434065319849343381, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
       propertyPath: m_Name
       value: Leo
       objectReference: {fileID: 0}
+    - target: {fileID: 7434065319849343381, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434065320198629707, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7434065320202930092, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
       propertyPath: m_Name
       value: Ninja
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434065320202930092, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7776153964780119109, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
       propertyPath: _key
@@ -21723,9 +21752,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1325517811}
     - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: characters.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: characters.Array.data[0]
+      value: 
+      objectReference: {fileID: 1045745362}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: characters.Array.data[1]
+      value: 
+      objectReference: {fileID: 1938162508}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: characters.Array.data[2]
+      value: 
+      objectReference: {fileID: 7776153964876828858}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: characters.Array.data[3]
+      value: 
+      objectReference: {fileID: 7776153964876828856}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
       propertyPath: characters.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7776153964876828854}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: characters.Array.data[5]
+      value: 
+      objectReference: {fileID: 7776153964876828852}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: characters.Array.data[6]
+      value: 
+      objectReference: {fileID: 7776153964876828850}
+    - target: {fileID: 7776153965252451958, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
+      propertyPath: characters.Array.data[7]
+      value: 
+      objectReference: {fileID: 7776153964876828848}
     - target: {fileID: 7776153965252451959, guid: fd5f7ad2dcdcde94d83e9c93833f3425, type: 3}
       propertyPath: m_RootOrder
       value: 2

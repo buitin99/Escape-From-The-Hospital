@@ -1281,7 +1281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &290765166
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1299,10 +1299,10 @@ RectTransform:
   m_Father: {fileID: 296386393}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -5301.689}
-  m_SizeDelta: {x: 1920, y: 1952.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1422.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &290765167
 MonoBehaviour:
@@ -2024,8 +2024,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -1899}
-  m_SizeDelta: {x: 1920, y: 3068}
+  m_AnchoredPosition: {x: 960, y: -2621.5}
+  m_SizeDelta: {x: 1920, y: 4512.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544273290
 MonoBehaviour:
@@ -3869,7 +3869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &905526334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5805,7 +5805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1172383088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7201,13 +7201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb44c55124f37a94eae0c66603f79e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   myPurchaseBtns:
   - {fileID: 848939715}
   - {fileID: 1785612374}
@@ -7223,11 +7216,6 @@ MonoBehaviour:
   - {fileID: 936551252}
   - {fileID: 472991744}
   - {fileID: 1016995606}
-  coins: 5000
-  totalCoins: 0
-  Owner: 
-  ButtonOwner: []
-  currentCharactersIndex: 0
 --- !u!82 &1406365878
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9707,7 +9695,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 3068}
+  m_SizeDelta: {x: 1920, y: 4512.9}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1829096314
 MonoBehaviour:
@@ -10735,8 +10723,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 61.399902}
+  m_SizeDelta: {x: 0, y: -123.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979033274
 MonoBehaviour:
@@ -11334,6 +11322,14 @@ PrefabInstance:
     - target: {fileID: 2274461669634493957, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274461670420990077, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1406365877}
+    - target: {fileID: 2274461670420990077, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}

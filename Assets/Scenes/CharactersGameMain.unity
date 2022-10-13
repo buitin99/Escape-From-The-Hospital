@@ -1504,6 +1504,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2274461670420990077, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1406365880}
+    - target: {fileID: 2274461670420990077, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274461670420990077, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CharactersControl, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}
 --- !u!1 &290765165
@@ -1793,7 +1805,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2159,7 +2171,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3490,6 +3502,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719804627}
   m_CullTransparentMesh: 1
+--- !u!114 &721615849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2274461669952358619, guid: 126b20c87e399e14da2a2bba441060b1, type: 3}
+  m_PrefabInstance: {fileID: 284272874}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &769990040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8251,6 +8274,7 @@ GameObject:
   - component: {fileID: 1406365878}
   - component: {fileID: 1406365879}
   - component: {fileID: 1406365880}
+  - component: {fileID: 1406365881}
   m_Layer: 5
   m_Name: Shop Main
   m_TagString: Untagged
@@ -8469,6 +8493,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e001f31ec27ecad4d96f0f42b45389c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1406365881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406365871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4858c7df1ab176943ba0cdae019b671f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsUser: {fileID: 721615849}
 --- !u!1 &1413672713
 GameObject:
   m_ObjectHideFlags: 0
