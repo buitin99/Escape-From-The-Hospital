@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    private string[] stringLevel = {"Scenes/Level1","Scenes/Level2","Scenes/Level3"};
+    private string[] stringLevel = {"Scenes/Level1","Scenes/Level2","Scenes/Level3","Scenes/Level4","Scenes/Level5","Scenes/Level6"};
     public bool _isGameHashGameOver;
 
     private static GameManager _instance = null;

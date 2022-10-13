@@ -18,13 +18,13 @@ public class LoadScene : MonoBehaviour
       if (id != 0)
       {
         id--;
-        PlayerPrefs.SetInt("SelectedLevel",id);
+        PlayerPrefs.SetInt(PrefConst.CHANGED_LEVELS,id);
       }
     }
     public void SceneTransition(){
           id++;	    
           StartCoroutine(LoadingSceneAsync(GameManager.Instance.SceneTransitionLevel()));
-          PlayerPrefs.SetInt("SelectedLevel",id);
+          PlayerPrefs.SetInt(PrefConst.CHANGED_LEVELS,id);
     }
 
     IEnumerator LoadingSceneAsync(string sceneName)

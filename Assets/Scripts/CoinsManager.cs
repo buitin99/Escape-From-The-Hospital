@@ -11,7 +11,6 @@ public class CoinsManager : MonoBehaviour
     void Start()
     {
         coins = PlayerPrefs.GetInt(PrefConst.COINS_KEY,coins);
-        Debug.Log(coins);
         coinsUser.text = "CG: " + coins.ToString();
     }
 
