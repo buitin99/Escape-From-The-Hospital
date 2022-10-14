@@ -17,9 +17,10 @@ public class CoinsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ShopManager.flag)
+        if (ShopManager.flag || RewardedAds.flag)
         {
             ShopManager.flag = false;
+            // RewardedAds.flag = false;
             coins = PlayerPrefs.GetInt(PrefConst.COINS_KEY,coins);
             coinsUser.text = "CG: " + coins.ToString();
         }

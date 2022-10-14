@@ -9,5 +9,7 @@ public class PrefConst
    public const string COINS_KEY = "Coins";
    public const string CHANGED_CHARACTER = "SelectedCharacters";
    public const string CHANGED_LEVELS = "SelectedLevel";
+   public const string CURENT_LEVELS = "Cur_Level";
+
 
 }

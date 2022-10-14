@@ -25,6 +25,8 @@ public class LoadScene : MonoBehaviour
           id++;	    
           StartCoroutine(LoadingSceneAsync(GameManager.Instance.SceneTransitionLevel()));
           PlayerPrefs.SetInt(PrefConst.CHANGED_LEVELS,id);
+          PlayerPrefs.SetInt(PrefConst.CURENT_LEVELS,id);
+
     }
 
     IEnumerator LoadingSceneAsync(string sceneName)

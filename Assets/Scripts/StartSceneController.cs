@@ -20,7 +20,7 @@ public class StartSceneController : MonoBehaviour
     }
 
     private void StartGame(InputAction.CallbackContext ctx) {
-        SceneManager.LoadScene(stringLevel[PlayerPrefs.GetInt("SelectedLevel",LoadScene.id)]);
+        SceneManager.LoadScene(stringLevel[PlayerPrefs.GetInt(PrefConst.CHANGED_LEVELS,LoadScene.id)]);
     }
 
     public void GoToShopGame()
