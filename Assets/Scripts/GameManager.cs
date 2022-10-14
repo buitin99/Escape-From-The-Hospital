@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private string[] stringLevel = {"Scenes/Level1","Scenes/Level2","Scenes/Level3","Scenes/Level4","Scenes/Level5","Scenes/Level6"};
     public bool _isGameHashGameOver;
+    public static bool flag;
 
     private static GameManager _instance = null;
     public static GameManager Instance
@@ -37,6 +38,14 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start() {
+        if (!flag)
+        {
+            PauseMenu.FindObjectOfType<AudioSource>().Stop();
+        }
+    }
+
     public void GameOverDisplay()
     {
         StartCoroutine(GameOver());
