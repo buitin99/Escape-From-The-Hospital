@@ -27,10 +27,6 @@ public class FieldOfView : MonoBehaviour {
 
 		StartCoroutine ("FindTargetsWithDelay", .2f);
 	}
-
-
-
-
 	IEnumerator FindTargetsWithDelay(float delay) {
 		while (true) {
 			yield return new WaitForSeconds (delay);
@@ -55,11 +51,12 @@ public class FieldOfView : MonoBehaviour {
 				if (!Physics.Raycast (transform.position, dirToTarget, out hitInfo, dstToTarget, obstacleMask)) {
 					// if(hitInfo.transform.GetComponent<PlayerPowerUp>().Invisible()) return;
 					// if(FindObjectOfType<PlayerPowerUp>().Invisible())
-					if (!FindObjectOfType<PlayerPowerUp>().Invisible())
+					if (!FindObjectOfType<PlayerPowerUp>().Invisible()) 
 					{
 						visibleTargets.Add (target);
 						FindObjectOfType<GameManager>().GameOverDisplay();
-					}
+					} 
+					else return;
 				}
 			}
 		}

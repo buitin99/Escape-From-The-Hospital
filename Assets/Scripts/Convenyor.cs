@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Convenyor : MonoBehaviour
@@ -15,15 +13,11 @@ public class Convenyor : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         _characterController = FindObjectOfType<CharacterController>();
-
     }
 
     private void Update() 
     {
-        pos = rb.position;
-        // rb.position += Vector3.back*speed*Time.deltaTime;
-        // rb.MovePosition(pos); 
-                
+        pos = rb.position;              
     }
 
      private void OnTriggerStay(Collider other) {    

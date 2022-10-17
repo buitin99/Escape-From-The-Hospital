@@ -4,10 +4,8 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    private string[] stringLevel = {"Scenes/Level1","Scenes/Level2","Scenes/Level3","Scenes/Level4","Scenes/Level5","Scenes/Level6"};
     public bool _isGameHashGameOver;
     public static bool flag;
-
     private static GameManager _instance = null;
     public static GameManager Instance
     {
@@ -39,12 +37,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start() {
-        if (!flag)
-        {
-            PauseMenu.FindObjectOfType<AudioSource>().Stop();
-        }
-    }
+    // private void Start() {
+    //     if (!flag)
+    //     {
+    //         PauseMenu.FindObjectOfType<AudioSource>().Stop();
+    //     }
+    // }
 
     public void GameOverDisplay()
     {
@@ -57,7 +55,7 @@ public class GameManager : MonoBehaviour
         {
             _isGameHashGameOver = true;
             yield return new WaitForSeconds(0.1f);
-            SceneManager.LoadScene("LoseScene");
+            SceneManager.LoadScene(ScenesManager.scenesLoad[5]);
         }  
     }
 
@@ -69,12 +67,12 @@ public class GameManager : MonoBehaviour
     private IEnumerator CompleteLevel()
     {
         yield return new WaitForSeconds(0.4f);
-        SceneManager.LoadScene("CompleteScene");
+        SceneManager.LoadScene(ScenesManager.scenesLoad[4]);
     }
 
-    public string SceneTransitionLevel()
+    public string SceneTransitionLevel(int id)
     {
-        return stringLevel[LoadScene.id];
+        return ScenesManager.scenesLoad[LoadScene.id+StartSceneController.idScene];
     }
 
 }

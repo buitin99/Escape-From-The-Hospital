@@ -1,0 +1,51 @@
+using UnityEngine.InputSystem;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class StartSceneController : MonoBehaviour
+{
+    private PlayerInputAction _playerInputAction;
+    // {"StartScene","ShopGame","SelectLevelScene","CharactersGameMain","CompleteScene","LoseScene","Level1"}
+    public static int idScene = 6;
+    
+    private void Awake() {
+        _playerInputAction = new PlayerInputAction();
+        
+        _playerInputAction.Player.Move.performed += StartGame;
+        _playerInputAction.Player.Move.canceled += StartGame;
+    }
+
+    private void OnEnable() {
+        _playerInputAction.Enable();
+    }
+
+    private void StartGame(InputAction.CallbackContext ctx) {
+        if (PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS) < 1 )
+        {
+            SceneManager.LoadScene(ScenesManager.scenesLoad[idScene]);
+        }
+        else
+        {
+            SceneManager.LoadScene(ScenesManager.scenesLoad[PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS)+idScene]);
+        }
+    }
+
+    public void GoToShopGame()
+    {
+       SceneManager.LoadScene(ScenesManager.scenesLoad[1]); 
+    }
+    public void GoToSelectLevel()
+    {
+        SceneManager.LoadScene(ScenesManager.scenesLoad[2]);
+    }
+    public void GoToCharacters()
+    {
+        SceneManager.LoadScene(ScenesManager.scenesLoad[3]);
+    }
+
+    private void OnDestroy() {
+        _playerInputAction.Player.Move.performed -= StartGame;
+        _playerInputAction.Player.Move.canceled -= StartGame;
+    }
+
+}

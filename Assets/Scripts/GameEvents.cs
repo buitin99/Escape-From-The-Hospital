@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
-
+    public event Action onDoorWayTriggerExit;
     private void Awake() {
         current = this;
     }
@@ -18,8 +18,6 @@ public class GameEvents : MonoBehaviour
             onDoorWayTriggerEnter();
         }
     }
-
-    public event Action onDoorWayTriggerExit;
 
     public void DoorwayTriggerExit()
     {
