@@ -30,7 +30,7 @@ public class ShopManager : MonoBehaviour
     }
 
     private void Update() {
-        if ( RewardedAds.flag)
+        if (RewardedAds.flag)
         {
             coins = PlayerPrefs.GetInt(PrefConst.COINS_KEY,coins);
             coinsUser.text = "CG: " + coins.ToString();

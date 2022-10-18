@@ -7,12 +7,16 @@ public class StartSceneController : MonoBehaviour
     private PlayerInputAction _playerInputAction;
     // {"StartScene","ShopGame","SelectLevelScene","CharactersGameMain","CompleteScene","LoseScene","Level1"}
     public static int idScene = 6;
+
+     private PlayerData playerData;
     
     private void Awake() {
         _playerInputAction = new PlayerInputAction();
         
         _playerInputAction.Player.Move.performed += StartGame;
         _playerInputAction.Player.Move.canceled += StartGame;
+
+        playerData = PlayerData.Load();
     }
 
     private void OnEnable() {
@@ -20,14 +24,32 @@ public class StartSceneController : MonoBehaviour
     }
 
     private void StartGame(InputAction.CallbackContext ctx) {
-        if (PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS) < 1 )
-        {
-            SceneManager.LoadScene(ScenesManager.scenesLoad[idScene]);
-        }
-        else
-        {
-            SceneManager.LoadScene(ScenesManager.scenesLoad[PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS)+idScene]);
-        }
+        // if (PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS) < 1 )
+        // {
+        //     SceneManager.LoadScene(ScenesManager.scenesLoad[idScene]);
+        // }
+        // else
+        // {
+        //     SceneManager.LoadScene(ScenesManager.scenesLoad[PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS)+idScene]);
+        // }
+
+        // Player.LoadPlayer();
+
+        // play.LoadPlayer();
+
+    
+
+        // if (play.level < 1)
+        // {
+        //     SceneManager.LoadScene(ScenesManager.scenesLoad[idScene]);
+        // }
+        // else
+        // {
+        //     SceneManager.LoadScene(ScenesManager.scenesLoad[play.level]+idScene); 
+        // }
+            // SceneManager.LoadScene(ScenesManager.scenesLoad[TriggerEnd.idLevel]); 
+            SceneManager.LoadScene(ScenesManager.scenesLoad[playerData.totalLevel]); 
+        
     }
 
     public void GoToShopGame()

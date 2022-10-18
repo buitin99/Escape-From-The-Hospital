@@ -9,11 +9,13 @@ public class PlayerPowerUp : MonoBehaviour
     CharacterController controller;
     private float timeFootStep;
 
-    private void Awake() {
+    private void Awake() 
+    {
         controller = GetComponent<CharacterController>();
     }
 
-    private void Update() {
+    private void Update() 
+    {
         if(Invisible()) {
             if(Time.time >= timeFootStep) {
                 GameObject f = Instantiate(footsp, transform.position, transform.rotation);
@@ -23,8 +25,8 @@ public class PlayerPowerUp : MonoBehaviour
         }
     }
 
-    public bool Invisible() {
+    public bool Invisible() 
+    {
         return isinvisible = InvisiblePlayer.isInvisible ? true : false;
-        // return isinvisible =  true;   
     }    
 }
