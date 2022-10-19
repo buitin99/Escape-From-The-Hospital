@@ -135,7 +135,12 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -881,7 +886,7 @@ PlayerSettings:
     Purchasing: 0
     UDP: 0
     UNet: 1
-    Unity Ads: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -895,10 +900,10 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 2
-  cloudProjectId: 20fe0de8-aca4-4f80-99d3-75237d4fa95a
+  cloudProjectId: 5f3bd185-6b17-4525-a3b1-06a815f1a89d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Escape From The Hospital
+  projectName: Escape From The Hospital (1)
   organizationId: tinbq
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

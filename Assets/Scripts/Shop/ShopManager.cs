@@ -3,9 +3,6 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using Random=UnityEngine.Random;
-
-
-
 public class ShopManager : MonoBehaviour
 {
     public Button[] myPurchaseBtns;
@@ -29,14 +26,14 @@ public class ShopManager : MonoBehaviour
         } 
     }
 
-    private void Update() {
-        if (RewardedAds.flag)
-        {
-            coins = PlayerPrefs.GetInt(PrefConst.COINS_KEY,coins);
-            coinsUser.text = "CG: " + coins.ToString();
-            GetReward();
-        }
-    }
+    // private void Update() {
+    //     if (RewardedAds.flag)
+    //     {
+    //         coins = PlayerPrefs.GetInt(PrefConst.COINS_KEY,coins);
+    //         coinsUser.text = "CG: " + coins.ToString();
+    //         GetReward();
+    //     }
+    // }
 
     public void PurchaseItem(int btnNo)
     {
@@ -58,37 +55,36 @@ public class ShopManager : MonoBehaviour
         return flag = true;
     }
 
-    public void GetReward(){
-            switch(_id)
-            {
-                case 0:
-                    coins = coins + 500;
-                    PlayerPrefs.SetInt(PrefConst.COINS_KEY,coins);
-                    coinsUser.text = "CG: " + coins.ToString();
-                    RewardedAds.flag = false;
-                    break;
-                case 1:
+    // public void GetReward(){
+    //         switch(_id)
+    //         {
+    //             case 0:
+    //                 coins = coins + 500;
+    //                 PlayerPrefs.SetInt(PrefConst.COINS_KEY,coins);
+    //                 coinsUser.text = "CG: " + coins.ToString();
+    //                 RewardedAds.flag = false;
+    //                 break;
+    //             case 1:
                 
-                    coins = coins + Random.Range(700,1000);
-                    PlayerPrefs.SetInt(PrefConst.COINS_KEY,coins);
-                    coinsUser.text = "CG: " + coins.ToString();
-                    RewardedAds.flag = false;
-                    break;
-                case 2:
-                    coins = coins + 900*Random.Range(1100,1300);
-                    PlayerPrefs.SetInt(PrefConst.COINS_KEY,coins);
-                    coinsUser.text = "CG: " + coins.ToString();
-                    RewardedAds.flag = false;
-                    break;
-                case 3:
-                    coins = coins + 1800*Random.Range(1400,1600);
-                    PlayerPrefs.SetInt(PrefConst.COINS_KEY,coins);
-                    coinsUser.text = "CG: " + coins.ToString();
-                    RewardedAds.flag = false;
-                    break;
-        }
-        
-    }
+    //                 coins = coins + Random.Range(700,1000);
+    //                 PlayerPrefs.SetInt(PrefConst.COINS_KEY,coins);
+    //                 coinsUser.text = "CG: " + coins.ToString();
+    //                 RewardedAds.flag = false;
+    //                 break;
+    //             case 2:
+    //                 coins = coins + 900*Random.Range(1100,1300);
+    //                 PlayerPrefs.SetInt(PrefConst.COINS_KEY,coins);
+    //                 coinsUser.text = "CG: " + coins.ToString();
+    //                 RewardedAds.flag = false;
+    //                 break;
+    //             case 3:
+    //                 coins = coins + 1800*Random.Range(1400,1600);
+    //                 PlayerPrefs.SetInt(PrefConst.COINS_KEY,coins);
+    //                 coinsUser.text = "CG: " + coins.ToString();
+    //                 RewardedAds.flag = false;
+    //                 break;
+    //     }  
+    // }
 
     public void GetId(int id)
     {

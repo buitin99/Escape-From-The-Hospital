@@ -1,95 +1,52 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
 using TMPro;
 
-    public class PlayerController : MonoBehaviour
-    {   
-        private CharacterController _characterController;
-        private PlayerInputAction _playerInputActions;
-        private Animator _animator;
-        [SerializeField]
-        private float _speed = 0.5f;
-        private Vector2 _inputMove;
-        [SerializeField]
-        private float _forceMagnitude;
-        private float _velocity;
-        private int _VelocityHash;
-        [SerializeField]
-        private GameObject _playerGO;
-        [SerializeField]
-        private Transform _destination;
-        [SerializeField]
-        private Transform _player; 
-        [SerializeField]
-        private GameObject _key;
-        [SerializeField]
-        private GameObject _triggerArea;
+public class PlayerController : MonoBehaviour
+{   
+    private CharacterController _characterController;
+    private PlayerInputAction _playerInputActions;
+    private Animator _animator;
+    [SerializeField]
+    private float _speed = 0.1f;
+    private Vector2 _inputMove;
+    [SerializeField]
+    private float _forceMagnitude;
+    private float _velocity;
+    private int _VelocityHash;
 
-        [SerializeField]
-        private GameObject _triggerLaser;
-        [SerializeField]
-        private GameObject _laser;
-        [SerializeField]
-        private TMP_Text[] _plotTextList;
+    // public GameObject[] choiceCameraFreeLook;
 
-        [SerializeField]
-        private TMP_Text _plotText;
+    // public int id;
+    // private static PlayerController _instance = null;
+    // public static PlayerController Instance
+    // {
+    //     get {
+    //         if (_instance == null)
+    //         {
+    //             _instance = GameObject.FindObjectOfType<PlayerController>();
+    //             if (_instance == null)
+    //             {
+    //                 GameObject playerController = new GameObject("playerController");
+    //                 _instance = playerController.AddComponent<PlayerController>();
 
-        [SerializeField]
-        private GameObject[] _plotList;
+    //                 DontDestroyOnLoad(playerController);
+    //             }
+    //         }
+    //         return _instance;
+    //     }
+    // }
 
-        [SerializeField]
-        private GameObject _plotImage;
+    private void Awake() {
 
-        [SerializeField]
-        private GameObject _plotManager;
-        [SerializeField]
-        private GameObject _electric;
-        [SerializeField]
-        private GameObject _plotActive;
-
-        [SerializeField]
-        private GameObject _image;
-
-        [SerializeField]
-        private GameObject _doorLv4;
-
-        [SerializeField]
-        private GameObject _triggerCameraOn;
-
-        public GameObject[] choiceCameraFreeLook;
-
-        public int id;
-        private static PlayerController _instance = null;
-        public static PlayerController Instance
-        {
-            get {
-                if (_instance == null)
-                {
-                    _instance = GameObject.FindObjectOfType<PlayerController>();
-                    if (_instance == null)
-                    {
-                        GameObject playerController = new GameObject("playerController");
-                        _instance = playerController.AddComponent<PlayerController>();
-
-                        DontDestroyOnLoad(playerController);
-                    }
-                }
-                return _instance;
-            }
-        }
-
-        private void Awake() {
-
-            if(_instance == null)
-            {
-                _instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+        // if(_instance == null)
+        // {
+        //     _instance = this;
+        // }
+        // else
+        // {
+        //     Destroy(gameObject);
+        // }
             _characterController = GetComponent<CharacterController>();
             _playerInputActions = new PlayerInputAction(); 
             
@@ -97,38 +54,38 @@ using TMPro;
             _playerInputActions.Player.Move.canceled += SetDirMove;
         }
 
-        private void Start() {
+    private void Start() {
             // FindObjectOfType<AudioManager>().Stop("Theme");
-            _animator = GetComponent<Animator>();
-            _VelocityHash = Animator.StringToHash("Velocity");
+        _animator = GetComponent<Animator>();
+        _VelocityHash = Animator.StringToHash("Velocity");
 
-            for (int i = 0; i < choiceCameraFreeLook.Length; i++)
-            {
-                if (i == PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID))
-                {
-                    choiceCameraFreeLook[i].SetActive(true);
-                }
-            }
-        }
-        private void OnEnable() {
-            _playerInputActions.Enable();
+        // for (int i = 0; i < choiceCameraFreeLook.Length; i++)
+        // {
+        //     if (i == PlayerPrefs.GetInt(PrefConst.CUR_PLAYER_ID))
+        //     {
+        //         choiceCameraFreeLook[i].SetActive(true);
+        //     }
+        // }
+    }
+    private void OnEnable() {
+        _playerInputActions.Enable();
             // FindObjectOfType<AudioManager>().Play("Horror");
-        }
+    }
 
-        void FixedUpdate()
-        {   
-            if(new Vector3(_inputMove.x,0,_inputMove.y) != Vector3.zero) {
-                transform.rotation = Quaternion.LookRotation(new Vector3(_inputMove.x,0,_inputMove.y));
-            }
-            _characterController.Move(new Vector3(_inputMove.x,0,_inputMove.y)*_speed);
-            _animator.SetFloat(_VelocityHash, _velocity);
+    void FixedUpdate()
+    {   
+        if(new Vector3(_inputMove.x,0,_inputMove.y) != Vector3.zero) {
+            transform.rotation = Quaternion.LookRotation(new Vector3(_inputMove.x,0,_inputMove.y));
         }
+        _characterController.Move(new Vector3(_inputMove.x,0,_inputMove.y)*_speed);
+        _animator.SetFloat(_VelocityHash, _velocity);
+    }
         
-        private void SetDirMove( InputAction.CallbackContext ctx) {
-            _inputMove = ctx.ReadValue<Vector2>();
-            _velocity = Vector3.Distance(Vector3.zero, new Vector3(_inputMove.x,0,_inputMove.y));
-        }
-        private void OnControllerColliderHit(ControllerColliderHit hit) 
+    private void SetDirMove( InputAction.CallbackContext ctx) {
+        _inputMove = ctx.ReadValue<Vector2>();
+        _velocity = Vector3.Distance(Vector3.zero, new Vector3(_inputMove.x,0,_inputMove.y));
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit) 
         {
             Rigidbody _rg = hit.collider.attachedRigidbody;
             
@@ -142,60 +99,9 @@ using TMPro;
             }
         }
 
-        private void OnTriggerEnter(Collider other) {
-            if (other.CompareTag("Teleport"))
-            {
-                _playerGO.SetActive(false);
-                _player.position = _destination.position;
-                _playerGO.SetActive(true);
-            }
-
-            if (other.CompareTag("Key"))
-            {
-                _key.SetActive(false);
-                _triggerArea.SetActive(true);
-            }
-
-            if (other.CompareTag("TriggerLaser"))
-            {
-                _laser.SetActive(false);
-                _triggerLaser.SetActive(false);
-                _electric.SetActive(false);
-            }
-
-            if (other.CompareTag("2"))
-            {
-                StartCoroutine(PlotAllGame());
-                _plotManager.SetActive(true);
-                _plotActive.SetActive(false);
-                _image.SetActive(true);
-            }
-
-            if (other.CompareTag("DoorLv4")) 
-            {
-                _doorLv4.transform.rotation = Quaternion.Euler(-90,0,-140f);
-                _triggerCameraOn.SetActive(true);
-            }   
-        }
-
-        private void OnDestroy() {
+    private void OnDestroy() {
             _playerInputActions.Player.Move.performed -= SetDirMove;
             _playerInputActions.Player.Move.canceled -= SetDirMove;
         }
-
-        private IEnumerator PlotAllGame( )
-        {
-            for (int i = 0; i < _plotTextList.Length; i++)
-            {
-                _plotImage.SetActive(true);
-                _plotText.text = _plotTextList[i].text;
-                yield return new WaitForSeconds(2);
-                _plotList[i].SetActive(false);
-            }
-            _plotManager.SetActive(false);
-            _plotImage.SetActive(false);
-            _image.SetActive(false);
-        }
-
     }
 

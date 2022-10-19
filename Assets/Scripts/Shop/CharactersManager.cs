@@ -3,10 +3,9 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class ChaManager : MonoBehaviour
+public class CharactersManager : MonoBehaviour
 {
    public Button[] btn;
-
    private void Start() {
 
       for (int i = 0; i < btn.Length; i++)

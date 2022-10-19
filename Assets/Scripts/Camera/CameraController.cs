@@ -13,16 +13,16 @@ public class CameraController : MonoBehaviour
     {
         if (flag)
         {
-            StartCoroutine(moveObject2());
+            StartCoroutine(moveObjectTo());
         }else
         {
-            StartCoroutine(moveObject());
+            StartCoroutine(moveCameraFrom());
         }
     }
 
-    public IEnumerator moveObject() {
-    float totalMovementTime = 5f; //the amount of time you want the movement to take
-    float currentMovementTime = 0f;//The amount of time that has passed
+    public IEnumerator moveCameraFrom() {
+        float totalMovementTime = 5f;
+        float currentMovementTime = 0f;
         while (Vector3.Distance(transform.localPosition, Destination) > 0.1f) 
         {
             currentMovementTime += Time.deltaTime;
@@ -32,9 +32,9 @@ public class CameraController : MonoBehaviour
         flag = true;    
     }
 
-    public IEnumerator moveObject2() {
-    float totalMovementTime = 5f; //the amount of time you want the movement to take
-    float currentMovementTime = 0f;//The amount of time that has passed
+    public IEnumerator moveObjectTo() {
+        float totalMovementTime = 5f;
+        float currentMovementTime = 0f;
         while (Vector3.Distance(transform.localPosition, Origin) > 0.1f) 
         {
             currentMovementTime += Time.deltaTime;

@@ -13,17 +13,17 @@ public class StartSceneController : MonoBehaviour
     private void Awake() {
         _playerInputAction = new PlayerInputAction();
         
-        _playerInputAction.Player.Move.performed += StartGame;
-        _playerInputAction.Player.Move.canceled += StartGame;
+        // _playerInputAction.Player.Move.performed += StartGame;
+        // _playerInputAction.Player.Move.canceled += StartGame;
 
-        playerData = PlayerData.Load();
+        // playerData = PlayerData.Load();
     }
 
     private void OnEnable() {
         _playerInputAction.Enable();
     }
 
-    private void StartGame(InputAction.CallbackContext ctx) {
+    // private void StartGame(InputAction.CallbackContext ctx) {
         // if (PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS) < 1 )
         // {
         //     SceneManager.LoadScene(ScenesManager.scenesLoad[idScene]);
@@ -48,9 +48,9 @@ public class StartSceneController : MonoBehaviour
         //     SceneManager.LoadScene(ScenesManager.scenesLoad[play.level]+idScene); 
         // }
             // SceneManager.LoadScene(ScenesManager.scenesLoad[TriggerEnd.idLevel]); 
-            SceneManager.LoadScene(ScenesManager.scenesLoad[playerData.totalLevel]); 
+            // SceneManager.LoadScene(ScenesManager.scenesLoad[playerData.totalLevel]); 
         
-    }
+    // }
 
     public void GoToShopGame()
     {
@@ -65,9 +65,14 @@ public class StartSceneController : MonoBehaviour
         SceneManager.LoadScene(ScenesManager.scenesLoad[3]);
     }
 
-    private void OnDestroy() {
-        _playerInputAction.Player.Move.performed -= StartGame;
-        _playerInputAction.Player.Move.canceled -= StartGame;
+    public void Got1()
+    {
+        SceneManager.LoadScene(ScenesManager.scenesLoad[PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS)+idScene]);
     }
+
+    // private void OnDestroy() {
+    //     _playerInputAction.Player.Move.performed -= StartGame;
+    //     _playerInputAction.Player.Move.canceled -= StartGame;
+    // }
 
 }

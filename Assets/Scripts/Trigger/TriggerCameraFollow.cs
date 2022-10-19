@@ -17,6 +17,4 @@ public class TriggerCameraFollow : MonoBehaviour
     private void OnTriggerExit(Collider other) {
         isTrigger = false;
     }
-
-
 }
