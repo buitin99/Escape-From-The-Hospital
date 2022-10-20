@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class CMFreeLookPlayer : MonoBehaviour
 {
-    //Used
+    //Not Used
     public GameObject CMFL;
 }
