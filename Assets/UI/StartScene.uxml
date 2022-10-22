@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/StartStyle.uss?fileID=7433441132597879392&amp;guid=f26281acf16baa145ae3ca568c7fbc6e&amp;type=3#StartStyle" />
+    <ui:VisualElement name="Menu" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="LeftSection" style="background-color: rgb(0, 215, 255); width: 45%; height: 100%; margin-left: 50px; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:VisualElement name="Logo" style="background-image: url(&apos;project://database/Assets/Art/LogoMain%201.png?fileID=21300000&amp;guid=8d3aa97034fe3f342bbe9119a1399905&amp;type=3#LogoMain 1&apos;); width: 337px; height: 10%; margin-left: 0; margin-right: 0; margin-top: 10%; background-color: rgba(0, 0, 0, 0); align-items: center; padding-left: 0; padding-right: 0;" />
+            <ui:VisualElement name="Button" style="align-items: stretch; flex-grow: 1; justify-content: center; height: auto; margin-top: 10%; padding-bottom: 20%; rotate: 0; scale: 1 1; background-color: rgb(0, 215, 255);">
+                <ui:Button text="&#10;Play&#10;" display-tooltip-when-elided="true" name="PlayButton" class="start-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgb(0, 215, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+                <ui:Button text="&#10;Shop&#10;" display-tooltip-when-elided="true" name="ShopButton" class="start-button" style="justify-content: flex-start; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(0, 215, 255);" />
+                <ui:Button text="&#10;Characters&#10;" display-tooltip-when-elided="true" name="CharactersButton" class="start-button" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(0, 215, 255);" />
+                <ui:Button text="&#10;Settings&#10;" display-tooltip-when-elided="true" name="SettingButton" class="start-button" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(0, 215, 255);" />
+                <ui:Button text="&#10;Exit&#10;" display-tooltip-when-elided="true" name="ExitButton" class="start-button" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(0, 215, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightSection" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

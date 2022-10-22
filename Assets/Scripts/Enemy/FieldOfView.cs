@@ -51,12 +51,22 @@ public class FieldOfView : MonoBehaviour {
 				if (!Physics.Raycast (transform.position, dirToTarget, out hitInfo, dstToTarget, obstacleMask)) {
 					// if(hitInfo.transform.GetComponent<PlayerPowerUp>().Invisible()) return;
 					// if(FindObjectOfType<PlayerPowerUp>().Invisible())
+					//Pre 22/10/22
 					if (!FindObjectOfType<PlayerPowerUp>().Invisible()) 
 					{
 						visibleTargets.Add (target);
 						FindObjectOfType<GameManager>().GameOverDisplay();
 					} 
 					else return;
+					//22/10/22
+					// if (hitInfo.transform.GetComponent<PlayerPowerUp>() != null)
+					// {
+						// if (!GetComponent<PlayerPowerUp>().Invisible() && GetComponent<PlayerPowerUp>() == null)
+						// {
+						// 	visibleTargets.Add(target);
+						// 	GetComponent<GameManager>().GameOverDisplay();
+						// }else return;
+					// }
 				}
 			}
 		}

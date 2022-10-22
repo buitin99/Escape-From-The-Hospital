@@ -1,6 +1,7 @@
 using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class StartSceneController : MonoBehaviour
 {
@@ -9,9 +10,24 @@ public class StartSceneController : MonoBehaviour
     public static int idScene = 6;
 
      private PlayerData playerData;
-    
+
+    private UIDocument _doc;
+    private Button _playButton;
+    // private Button _settingsButton;
+    // private Button _shopButton;
+    // private Button _charactersButton;
+    // private Button _exitButton;
+
     private void Awake() {
         _playerInputAction = new PlayerInputAction();
+        _doc = GetComponent<UIDocument>();
+        _playButton = _doc.rootVisualElement.Q<Button>("PlayButton");
+        // _settingsButton = _doc.rootVisualElement.Q<Button>("SettingsButton");
+        // _shopButton = _doc.rootVisualElement.Q<Button>("ShopButton");
+        // _charactersButton = _doc.rootVisualElement.Q<Button>("CharactersButton");
+        // _exitButton = _doc.rootVisualElement.Q<Button>("ExitButton");
+
+        _playButton.clicked += GoToPlay;
         
         // _playerInputAction.Player.Move.performed += StartGame;
         // _playerInputAction.Player.Move.canceled += StartGame;
@@ -52,6 +68,10 @@ public class StartSceneController : MonoBehaviour
         
     // }
 
+    private void GoToPlay()
+    {
+        SceneManager.LoadScene(ScenesManager.scenesLoad[PlayerPrefs.GetInt(PrefConst.CURENT_LEVELS)+idScene]);        
+    }
     public void GoToShopGame()
     {
        SceneManager.LoadScene(ScenesManager.scenesLoad[1]); 

@@ -1,0 +1,16 @@
+.start-button {
+    font-size: 30px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(51, 51, 51, 255);
+    transition-duration: 0.2s;
+}
+
+.start-button:active {
+    color: rgba(255, 255, 255, 255);
+    font-size: 40px;
+    rotate: 0;
+    scale: 1.4 1.4;
+    transition-duration: 0.3s;
+}

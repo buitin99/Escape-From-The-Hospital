@@ -9,7 +9,7 @@ using UnityEngine;
     {
         IInterstitialAd ad;
         string adUnitId = "Interstitial_Android";
-        string gameId = "4981214";
+        string gameId = "4981328";
 
         private void Start() {
             InitServices();

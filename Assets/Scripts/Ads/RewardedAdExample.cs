@@ -4,11 +4,13 @@ using Unity.Services.Core;
 using Unity.Services.Mediation;
 using UnityEngine;
 
+
     public class RewardedAdExample : MonoBehaviour
     {
         IRewardedAd ad;
         string adUnitId = "Rewarded_Android";
-        string gameId = "4981214";
+        string gameId = "4981328";
+        public static bool flag; 
 
         private void Start() {
             InitServices();
@@ -132,5 +134,7 @@ using UnityEngine;
         void UserRewarded(object sender, RewardEventArgs e)
         {
             Debug.Log($"Received reward: type:{e.Type}; amount:{e.Amount}");
+            flag = true;
         }
-    }
+
+}
